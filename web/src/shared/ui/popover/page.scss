@@ -1,0 +1,18 @@
+.app-popover {
+  .app-popover__trigger {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    border-radius: 8px;
+    gap: 8px;
+    cursor: pointer;
+
+    &:hover {
+      background: var(--film-bg-chip-hover);
+    }
+
+    &.active {
+      background: var(--film-bg-chip-active);
+    }
+  }
+}

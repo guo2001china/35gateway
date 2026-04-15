@@ -1,0 +1,4310 @@
+{
+  "models": [
+    {
+      "model_code": "DeepSeek-V3.2",
+      "display_name": "DeepSeek-V3.2",
+      "category": "text",
+      "summary": "DeepSeek 官方聊天模型，对外通过 OpenAI-compatible chat completions 入口接入。",
+      "status": "available",
+      "docs_url": "https://api-docs.deepseek.com/api/create-chat-completion",
+      "billing_unit": "token",
+      "currency": "CNY",
+      "multiplier": "1.11111111",
+      "official_price_json": {
+        "cache_hit_input_per_1m_tokens": "0.196000000000",
+        "cache_miss_input_per_1m_tokens": "1.960000000000",
+        "output_per_1m_tokens": "2.940000000000"
+      },
+      "provider_cost_json": {
+        "cache_hit_input_per_1m_tokens": "0.196000000000",
+        "cache_miss_input_per_1m_tokens": "1.960000000000",
+        "output_per_1m_tokens": "2.940000000000"
+      },
+      "notes": "基于 DeepSeek 官方 V3.2 价格，平台销售价按 10% 毛利反推。",
+      "source_url": "https://api-docs.deepseek.com/quick_start/pricing",
+      "last_verified_at": "2026-03-26T00:00:00"
+    },
+    {
+      "model_code": "seedance-2.0",
+      "display_name": "Seedance 2.0",
+      "category": "video",
+      "summary": "ByteDance Seedance 2.0 标准版视频模型。V1 当前对外收口文生视频和单图生视频，并固定接入 fal 的标准 tier。",
+      "status": "available",
+      "docs_url": "https://fal.ai/models/bytedance/seedance-2.0/reference-to-video",
+      "billing_unit": "second",
+      "currency": "CNY",
+      "multiplier": "1.11111111",
+      "official_price_json": {
+        "text_to_video_per_second": "2.12380000",
+        "image_to_video_per_second": "2.11680000"
+      },
+      "provider_cost_json": {
+        "text_to_video_per_second": "2.12380000",
+        "image_to_video_per_second": "2.11680000"
+      },
+      "notes": "按 fal 官方公开的 Seedance 2.0 720p 标准 tier 价格折算人民币；V1 仅开放文生和单图生，因此未引入 reference/video input 差异价。",
+      "source_url": "https://fal.ai/learn/tools/how-to-use-seedance-2-0",
+      "last_verified_at": "2026-04-13T00:00:00"
+    },
+    {
+      "model_code": "seedance-2.0-fast",
+      "display_name": "Seedance 2.0 Fast",
+      "category": "video",
+      "summary": "ByteDance Seedance 2.0 Fast 视频模型。V1 当前对外收口文生视频和单图生视频，并固定接入 fal 的 fast tier。",
+      "status": "available",
+      "docs_url": "https://fal.ai/models/bytedance/seedance-2.0/fast/reference-to-video/api",
+      "billing_unit": "second",
+      "currency": "CNY",
+      "multiplier": "1.11111111",
+      "official_price_json": {
+        "per_second": "1.69330000"
+      },
+      "provider_cost_json": {
+        "per_second": "1.69330000"
+      },
+      "notes": "按 fal 官方公开的 Seedance 2.0 Fast 720p 价格折算人民币；文生和单图生当前同价，音频默认开启且不单独加价。",
+      "source_url": "https://fal.ai/learn/tools/how-to-use-seedance-2-0",
+      "last_verified_at": "2026-04-13T00:00:00"
+    },
+    {
+      "model_code": "MiniMax-Hailuo-2.3",
+      "display_name": "MiniMax Hailuo 2.3",
+      "category": "video",
+      "summary": "MiniMax video model on the planned integration list.",
+      "status": "planned",
+      "docs_url": "",
+      "billing_unit": null,
+      "currency": "CNY",
+      "multiplier": "1.11111111",
+      "official_price_json": {},
+      "provider_cost_json": {},
+      "notes": "",
+      "source_url": null,
+      "last_verified_at": null
+    },
+    {
+      "model_code": "MiniMax-M2.5",
+      "display_name": "MiniMax M2.5",
+      "category": "text",
+      "summary": "MiniMax text model on the planned integration list.",
+      "status": "planned",
+      "docs_url": "",
+      "billing_unit": null,
+      "currency": "CNY",
+      "multiplier": "1.11111111",
+      "official_price_json": {},
+      "provider_cost_json": {},
+      "notes": "",
+      "source_url": null,
+      "last_verified_at": null
+    },
+    {
+      "model_code": "MiniMax-M2.7",
+      "display_name": "MiniMax M2.7",
+      "category": "text",
+      "summary": "MiniMax 当前主推的通用文本模型，对外通过 OpenAI-compatible chat completions 入口接入。",
+      "status": "available",
+      "docs_url": "https://platform.minimaxi.com/docs/api-reference/api-overview",
+      "billing_unit": "token",
+      "currency": "CNY",
+      "multiplier": "1.11111111",
+      "official_price_json": {
+        "input_per_1m_tokens": "2.1",
+        "cached_input_per_1m_tokens": "0.42",
+        "output_per_1m_tokens": "8.4"
+      },
+      "provider_cost_json": {
+        "input_per_1m_tokens": "2.1",
+        "cached_input_per_1m_tokens": "0.42",
+        "output_per_1m_tokens": "8.4"
+      },
+      "notes": "基于 MiniMax M2.7 官方按量计费价格，平台销售价按 10% 毛利反推。当前缓存写入价格未单独建模。",
+      "source_url": "https://platform.minimaxi.com/docs/guides/pricing-paygo",
+      "last_verified_at": "2026-04-10T00:00:00"
+    },
+    {
+      "model_code": "MiniMax-M2.7-highspeed",
+      "display_name": "MiniMax M2.7 Highspeed",
+      "category": "text",
+      "summary": "MiniMax M2.7 的高速版本，强调更高吞吐与更低响应时延，对外通过 OpenAI-compatible chat completions 入口接入。",
+      "status": "available",
+      "docs_url": "https://platform.minimaxi.com/docs/api-reference/api-overview",
+      "billing_unit": "token",
+      "currency": "CNY",
+      "multiplier": "1.11111111",
+      "official_price_json": {
+        "input_per_1m_tokens": "4.2",
+        "cached_input_per_1m_tokens": "0.42",
+        "output_per_1m_tokens": "16.8"
+      },
+      "provider_cost_json": {
+        "input_per_1m_tokens": "4.2",
+        "cached_input_per_1m_tokens": "0.42",
+        "output_per_1m_tokens": "16.8"
+      },
+      "notes": "基于 MiniMax M2.7 Highspeed 官方按量计费价格，平台销售价按 10% 毛利反推。当前缓存写入价格未单独建模。",
+      "source_url": "https://platform.minimaxi.com/docs/guides/pricing-paygo",
+      "last_verified_at": "2026-04-10T00:00:00"
+    },
+    {
+      "model_code": "doubao-seedream-4.5",
+      "display_name": "Doubao Seedream 4.5",
+      "category": "image",
+      "summary": "火山引擎 Doubao Seedream 4.5 图片生成模型。当前平台按 2K / 4K 两档收口，并支持单图、多图参考输入。",
+      "status": "available",
+      "docs_url": "https://www.volcengine.com/docs/82379/1541523",
+      "billing_unit": "image",
+      "currency": "CNY",
+      "multiplier": "1.11111111",
+      "official_price_json": {
+        "per_image": "0.25"
+      },
+      "provider_cost_json": {
+        "per_image": "0.25"
+      },
+      "notes": "火山引擎官方计费为 ￥0.25 / 图；Doubao Seedream 4.5 支持 2K / 4K 与自定义像素。",
+      "source_url": "https://www.volcengine.com/docs/6492/1544808",
+      "last_verified_at": "2026-03-26T00:00:00"
+    },
+    {
+      "model_code": "doubao-seedream-5.0-lite",
+      "display_name": "Doubao Seedream 5.0 Lite",
+      "category": "image",
+      "summary": "火山引擎 Doubao Seedream 5.0 Lite 图片生成模型。当前平台按 2K / 3K 两档收口，并支持单图、多图参考输入。",
+      "status": "available",
+      "docs_url": "https://www.volcengine.com/docs/82379/1520755",
+      "billing_unit": "image",
+      "currency": "CNY",
+      "multiplier": "1.11111111",
+      "official_price_json": {
+        "per_image": "0.008"
+      },
+      "provider_cost_json": {
+        "per_image": "0.008"
+      },
+      "notes": "火山引擎官方价格为 ￥0.008 / 图；平台统一以人民币售卖并默认返回 url 结果。",
+      "source_url": "https://www.volcengine.com/docs/82379/1520755",
+      "last_verified_at": "2026-03-26T00:00:00"
+    },
+    {
+      "model_code": "gemini-2.5-flash",
+      "display_name": "Gemini 2.5 Flash",
+      "category": "text",
+      "summary": "Google Gemini 2.5 Flash text model through the official OpenAI-compatible chat completions endpoint.",
+      "status": "available",
+      "docs_url": "https://ai.google.dev/gemini-api/docs/openai",
+      "billing_unit": "token",
+      "currency": "CNY",
+      "multiplier": "1.11111111",
+      "official_price_json": {
+        "input_per_1m_tokens": "2.100000000000",
+        "cached_input_per_1m_tokens": "0.210000000000",
+        "output_per_1m_tokens": "17.500000000000"
+      },
+      "provider_cost_json": {
+        "input_per_1m_tokens": "2.100000000000",
+        "cached_input_per_1m_tokens": "0.210000000000",
+        "output_per_1m_tokens": "17.500000000000"
+      },
+      "notes": "基于 Google Gemini 2.5 Flash 官方 Paid Tier 价格，平台销售价按 10% 毛利反推。",
+      "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
+      "last_verified_at": "2026-03-26T00:00:00"
+    },
+    {
+      "model_code": "gemini-2.5-flash-lite",
+      "display_name": "Gemini 2.5 Flash-Lite",
+      "category": "text",
+      "summary": "Google Gemini 2.5 Flash-Lite text model through the official OpenAI-compatible chat completions endpoint.",
+      "status": "available",
+      "docs_url": "https://ai.google.dev/gemini-api/docs/openai",
+      "billing_unit": "token",
+      "currency": "CNY",
+      "multiplier": "1.11111111",
+      "official_price_json": {
+        "input_per_1m_tokens": "0.700000000000",
+        "cached_input_per_1m_tokens": "0.070000000000",
+        "output_per_1m_tokens": "2.800000000000"
+      },
+      "provider_cost_json": {
+        "input_per_1m_tokens": "0.700000000000",
+        "cached_input_per_1m_tokens": "0.070000000000",
+        "output_per_1m_tokens": "2.800000000000"
+      },
+      "notes": "基于 Google Gemini 2.5 Flash-Lite 官方 Paid Tier 价格，平台销售价按 10% 毛利反推。",
+      "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
+      "last_verified_at": "2026-03-26T00:00:00"
+    },
+    {
+      "model_code": "gemini-2.5-pro",
+      "display_name": "Gemini 2.5 Pro",
+      "category": "text",
+      "summary": "Google advanced multimodal generation model. Current platform supports both Gemini Developer API generateContent and OpenAI-compatible chat completions.",
+      "status": "available",
+      "docs_url": "https://ai.google.dev/gemini-api/docs/text-generation",
+      "billing_unit": "token",
+      "currency": "CNY",
+      "multiplier": "1.11111111",
+      "official_price_json": {
+        "input_per_1m_tokens_lte_200k": "8.750000000000",
+        "input_per_1m_tokens_gt_200k": "17.500000000000",
+        "cached_input_per_1m_tokens_lte_200k": "0.875000000000",
+        "cached_input_per_1m_tokens_gt_200k": "1.750000000000",
+        "output_per_1m_tokens_lte_200k": "70.000000000000",
+        "output_per_1m_tokens_gt_200k": "105.000000000000"
+      },
+      "provider_cost_json": {
+        "input_per_1m_tokens_lte_200k": "8.750000000000",
+        "input_per_1m_tokens_gt_200k": "17.500000000000",
+        "cached_input_per_1m_tokens_lte_200k": "0.875000000000",
+        "cached_input_per_1m_tokens_gt_200k": "1.750000000000",
+        "output_per_1m_tokens_lte_200k": "70.000000000000",
+        "output_per_1m_tokens_gt_200k": "105.000000000000"
+      },
+      "notes": "基于 Google Gemini 2.5 Pro 官方 Paid Tier 价格，平台销售价按 10% 毛利反推。",
+      "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
+      "last_verified_at": "2026-03-26T00:00:00"
+    },
+    {
+      "model_code": "gemini-3-flash-preview",
+      "display_name": "Gemini 3 Flash Preview",
+      "category": "text",
+      "summary": "Google Gemini 3 Flash Preview text model through the official OpenAI-compatible chat completions endpoint.",
+      "status": "available",
+      "docs_url": "https://ai.google.dev/gemini-api/docs/openai",
+      "billing_unit": "token",
+      "currency": "CNY",
+      "multiplier": "1.11111111",
+      "official_price_json": {
+        "input_per_1m_tokens": "3.500000000000",
+        "cached_input_per_1m_tokens": "0.350000000000",
+        "output_per_1m_tokens": "21.000000000000"
+      },
+      "provider_cost_json": {
+        "input_per_1m_tokens": "3.500000000000",
+        "cached_input_per_1m_tokens": "0.350000000000",
+        "output_per_1m_tokens": "21.000000000000"
+      },
+      "notes": "基于 Google Gemini 3 Flash Preview 官方 Paid Tier 价格，平台销售价按 10% 毛利反推。",
+      "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
+      "last_verified_at": "2026-03-26T00:00:00"
+    },
+    {
+      "model_code": "gemini-3.1-flash-lite-preview",
+      "display_name": "Gemini 3.1 Flash-Lite Preview",
+      "category": "text",
+      "summary": "Google Gemini 3.1 Flash-Lite Preview text model through the official OpenAI-compatible chat completions endpoint.",
+      "status": "available",
+      "docs_url": "https://ai.google.dev/gemini-api/docs/openai",
+      "billing_unit": "token",
+      "currency": "CNY",
+      "multiplier": "1.11111111",
+      "official_price_json": {
+        "input_per_1m_tokens": "1.750000000000",
+        "cached_input_per_1m_tokens": "0.175000000000",
+        "output_per_1m_tokens": "10.500000000000"
+      },
+      "provider_cost_json": {
+        "input_per_1m_tokens": "1.750000000000",
+        "cached_input_per_1m_tokens": "0.175000000000",
+        "output_per_1m_tokens": "10.500000000000"
+      },
+      "notes": "基于 Google Gemini 3.1 Flash-Lite Preview 官方 Paid Tier 价格，平台销售价按 10% 毛利反推。",
+      "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
+      "last_verified_at": "2026-03-26T00:00:00"
+    },
+    {
+      "model_code": "gemini-3.1-pro-preview",
+      "display_name": "Gemini 3.1 Pro Preview",
+      "category": "text",
+      "summary": "Google Gemini 3.1 Pro Preview text model through the official OpenAI-compatible chat completions endpoint.",
+      "status": "available",
+      "docs_url": "https://ai.google.dev/gemini-api/docs/openai",
+      "billing_unit": "token",
+      "currency": "CNY",
+      "multiplier": "1.11111111",
+      "official_price_json": {
+        "input_per_1m_tokens_lte_200k": "14.000000000000",
+        "input_per_1m_tokens_gt_200k": "28.000000000000",
+        "cached_input_per_1m_tokens_lte_200k": "1.400000000000",
+        "cached_input_per_1m_tokens_gt_200k": "2.800000000000",
+        "output_per_1m_tokens_lte_200k": "84.000000000000",
+        "output_per_1m_tokens_gt_200k": "126.000000000000"
+      },
+      "provider_cost_json": {
+        "input_per_1m_tokens_lte_200k": "14.000000000000",
+        "input_per_1m_tokens_gt_200k": "28.000000000000",
+        "cached_input_per_1m_tokens_lte_200k": "1.400000000000",
+        "cached_input_per_1m_tokens_gt_200k": "2.800000000000",
+        "output_per_1m_tokens_lte_200k": "84.000000000000",
+        "output_per_1m_tokens_gt_200k": "126.000000000000"
+      },
+      "notes": "基于 Google Gemini 3.1 Pro Preview 官方 Paid Tier 价格，平台销售价按 10% 毛利反推。",
+      "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
+      "last_verified_at": "2026-03-26T00:00:00"
+    },
+    {
+      "model_code": "glm-4.7-flash",
+      "display_name": "GLM 4.7 Flash",
+      "category": "text",
+      "summary": "Fast GLM text model, currently exposed through Cloudflare Workers AI OpenAI-compatible chat completions.",
+      "status": "available",
+      "docs_url": "https://developers.cloudflare.com/workers-ai/models/glm-4.7-flash/",
+      "billing_unit": "token",
+      "currency": "CNY",
+      "multiplier": "1.11111111",
+      "official_price_json": {
+        "input_per_1m_tokens": "0.420000000000",
+        "output_per_1m_tokens": "2.800000000000"
+      },
+      "provider_cost_json": {
+        "input_per_1m_tokens": "0.420000000000",
+        "output_per_1m_tokens": "2.800000000000"
+      },
+      "notes": "基于 Cloudflare Workers AI 官方价格，平台销售价按 10% 毛利反推。",
+      "source_url": "https://developers.cloudflare.com/workers-ai/platform/pricing/",
+      "last_verified_at": "2026-03-26T00:00:00"
+    },
+    {
+      "model_code": "gpt-5",
+      "display_name": "GPT-5",
+      "category": "text",
+      "summary": "OpenAI text model exposed through the chat-completions surface and currently backed by Ksyun fallback access.",
+      "status": "available",
+      "docs_url": "https://platform.openai.com/docs/api-reference/chat/create",
+      "billing_unit": "token",
+      "currency": "CNY",
+      "multiplier": "1.11111111",
+      "official_price_json": {
+        "input_per_1m_tokens": "8.750000000000",
+        "cached_input_per_1m_tokens": "0.875000000000",
+        "output_per_1m_tokens": "70.000000000000"
+      },
+      "provider_cost_json": {
+        "input_per_1m_tokens": "8.750000000000",
+        "cached_input_per_1m_tokens": "0.875000000000",
+        "output_per_1m_tokens": "70.000000000000"
+      },
+      "notes": "基于 OpenAI 官方 GPT-5 价格，平台销售价按 10% 毛利反推。",
+      "source_url": "https://openai.com/api/pricing/",
+      "last_verified_at": "2026-03-26T00:00:00"
+    },
+    {
+      "model_code": "gpt-5.2",
+      "display_name": "GPT-5.2",
+      "category": "text",
+      "summary": "OpenAI text model exposed through the chat-completions surface and currently backed by Ksyun fallback access.",
+      "status": "available",
+      "docs_url": "https://platform.openai.com/docs/api-reference/chat/create",
+      "billing_unit": "token",
+      "currency": "CNY",
+      "multiplier": "1.11111111",
+      "official_price_json": {
+        "input_per_1m_tokens": "12.250000000000",
+        "cached_input_per_1m_tokens": "1.225000000000",
+        "output_per_1m_tokens": "98.000000000000"
+      },
+      "provider_cost_json": {
+        "input_per_1m_tokens": "12.250000000000",
+        "cached_input_per_1m_tokens": "1.225000000000",
+        "output_per_1m_tokens": "98.000000000000"
+      },
+      "notes": "基于 OpenAI 官方 GPT-5.2 价格，平台销售价按 10% 毛利反推。",
+      "source_url": "https://openai.com/api/pricing/",
+      "last_verified_at": "2026-03-26T00:00:00"
+    },
+    {
+      "model_code": "gpt-5.4",
+      "display_name": "GPT-5.4",
+      "category": "text",
+      "summary": "OpenAI high-end text model for chat, reasoning, and general generation.",
+      "status": "available",
+      "docs_url": "https://platform.openai.com/docs/api-reference/chat/create",
+      "billing_unit": "token",
+      "currency": "CNY",
+      "multiplier": "1.11111111",
+      "official_price_json": {
+        "input_per_1m_tokens": "17.500000000000",
+        "cached_input_per_1m_tokens": "1.750000000000",
+        "output_per_1m_tokens": "105.000000000000"
+      },
+      "provider_cost_json": {
+        "input_per_1m_tokens": "17.500000000000",
+        "cached_input_per_1m_tokens": "1.750000000000",
+        "output_per_1m_tokens": "105.000000000000"
+      },
+      "notes": "基于 OpenAI 官方 GPT-5.4 价格，平台销售价按 10% 毛利反推。",
+      "source_url": "https://openai.com/api/pricing/",
+      "last_verified_at": "2026-03-26T00:00:00"
+    },
+    {
+      "model_code": "gpt-5.4-mini",
+      "display_name": "GPT-5.4 Mini",
+      "category": "text",
+      "summary": "OpenAI GPT-5.4 mini text model for lower-latency, lower-cost chat and generation workloads.",
+      "status": "available",
+      "docs_url": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+      "billing_unit": "token",
+      "currency": "CNY",
+      "multiplier": "1.11111111",
+      "official_price_json": {
+        "input_per_1m_tokens": "5.250000000000",
+        "cached_input_per_1m_tokens": "0.525000000000",
+        "output_per_1m_tokens": "31.500000000000"
+      },
+      "provider_cost_json": {
+        "input_per_1m_tokens": "5.250000000000",
+        "cached_input_per_1m_tokens": "0.525000000000",
+        "output_per_1m_tokens": "31.500000000000"
+      },
+      "notes": "基于 OpenAI 官方 GPT-5.4 mini 价格，平台销售价按 10% 毛利反推。",
+      "source_url": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+      "last_verified_at": "2026-03-26T00:00:00"
+    },
+    {
+      "model_code": "gpt-5.4-nano",
+      "display_name": "GPT-5.4 Nano",
+      "category": "text",
+      "summary": "OpenAI GPT-5.4 nano text model for high-volume, cost-sensitive chat and extraction workloads.",
+      "status": "available",
+      "docs_url": "https://developers.openai.com/api/docs/models/gpt-5.4-nano",
+      "billing_unit": "token",
+      "currency": "CNY",
+      "multiplier": "1.11111111",
+      "official_price_json": {
+        "input_per_1m_tokens": "1.400000000000",
+        "cached_input_per_1m_tokens": "0.140000000000",
+        "output_per_1m_tokens": "8.750000000000"
+      },
+      "provider_cost_json": {
+        "input_per_1m_tokens": "1.400000000000",
+        "cached_input_per_1m_tokens": "0.140000000000",
+        "output_per_1m_tokens": "8.750000000000"
+      },
+      "notes": "基于 OpenAI 官方 GPT-5.4 nano 价格，平台销售价按 10% 毛利反推。",
+      "source_url": "https://developers.openai.com/api/docs/models/gpt-5.4-nano",
+      "last_verified_at": "2026-03-26T00:00:00"
+    },
+    {
+      "model_code": "gpt-5.4-pro",
+      "display_name": "GPT-5.4 Pro",
+      "category": "text",
+      "summary": "OpenAI high-end pro text model. Current platform access is aligned to the Responses API.",
+      "status": "available",
+      "docs_url": "https://developers.openai.com/api/docs/models/gpt-5.4-pro",
+      "billing_unit": "token",
+      "currency": "CNY",
+      "multiplier": "1.11111111",
+      "official_price_json": {
+        "input_per_1m_tokens": "210.000000000000",
+        "output_per_1m_tokens": "1260.000000000000"
+      },
+      "provider_cost_json": {
+        "input_per_1m_tokens": "210.000000000000",
+        "output_per_1m_tokens": "1260.000000000000"
+      },
+      "notes": "基于 OpenAI 官方 GPT-5.4 Pro 价格，平台销售价按 10% 毛利反推。",
+      "source_url": "https://developers.openai.com/api/docs/models/gpt-5.4-pro",
+      "last_verified_at": "2026-03-26T00:00:00"
+    },
+    {
+      "model_code": "gpt-image-1",
+      "display_name": "GPT Image 1",
+      "category": "image",
+      "summary": "OpenAI image generation model planned for future access through api35.",
+      "status": "planned",
+      "docs_url": "https://platform.openai.com/docs/guides/image-generation",
+      "billing_unit": null,
+      "currency": "CNY",
+      "multiplier": "1.11111111",
+      "official_price_json": {},
+      "provider_cost_json": {},
+      "notes": "",
+      "source_url": null,
+      "last_verified_at": null
+    },
+    {
+      "model_code": "kling-o1",
+      "display_name": "Kling O1",
+      "category": "video",
+      "summary": "Kling Omni Video O1 视频资源。当前对外收口文生、单图、多参考图、视频参考和首尾帧视频，并固定解析到 kling-video-o1。",
+      "status": "available",
+      "docs_url": "https://app.klingai.com/global/dev/document-api/apiReference/model/OmniVideo",
+      "billing_unit": "second",
+      "currency": "CNY",
+      "multiplier": "1.11111111",
+      "official_price_json": {
+        "std_without_video_input_per_second": "0.60",
+        "std_with_video_input_per_second": "0.90",
+        "pro_without_video_input_per_second": "0.80",
+        "pro_with_video_input_per_second": "1.20"
+      },
+      "provider_cost_json": {
+        "std_without_video_input_per_second": "0.60",
+        "std_with_video_input_per_second": "0.90",
+        "pro_without_video_input_per_second": "0.80",
+        "pro_with_video_input_per_second": "1.20"
+      },
+      "notes": "Kling O1 当前对外收口文生、单图、多参考图、视频参考和首尾帧视频。",
+      "source_url": "https://app.klingai.com/global/dev/document-api/productBilling/prePaidResourcePackage",
+      "last_verified_at": "2026-03-26T00:00:00"
+    },
+    {
+      "model_code": "minimax-hailuo-02",
+      "display_name": "MiniMax Hailuo 02",
+      "category": "video",
+      "summary": "MiniMax Hailuo 02 视频模型。当前公开入口支持文生、图生和首尾帧视频。",
+      "status": "available",
+      "docs_url": "https://platform.minimaxi.com/docs/api-reference/video-generation-fl2v",
+      "billing_unit": "video",
+      "currency": "CNY",
+      "multiplier": "1.11111111",
+      "official_price_json": {
+        "text_or_image_768p_6s": "2.00",
+        "text_or_image_768p_10s": "4.00",
+        "text_or_image_1080p_6s": "3.50",
+        "image_512p_6s": "0.60",
+        "image_512p_10s": "1.00"
+      },
+      "provider_cost_json": {
+        "text_or_image_768p_6s": "2.00",
+        "text_or_image_768p_10s": "4.00",
+        "text_or_image_1080p_6s": "3.50",
+        "image_512p_6s": "0.60",
+        "image_512p_10s": "1.00"
+      },
+      "notes": "MiniMax Hailuo 02 当前支持文生、图生和首尾帧视频。",
+      "source_url": "https://platform.minimaxi.com/docs/guides/pricing-paygo",
+      "last_verified_at": "2026-03-26T00:00:00"
+    },
+    {
+      "model_code": "minimax-hailuo-2.3",
+      "display_name": "MiniMax Hailuo 2.3",
+      "category": "video",
+      "summary": "MiniMax Hailuo 2.3 视频模型。当前公开入口支持文生视频和图生视频。",
+      "status": "available",
+      "docs_url": "https://platform.minimaxi.com/docs/api-reference/video-generation-t2v",
+      "billing_unit": "video",
+      "currency": "CNY",
+      "multiplier": "1.11111111",
+      "official_price_json": {
+        "768p_6s": "2.00",
+        "768p_10s": "4.00",
+        "1080p_6s": "3.50"
+      },
+      "provider_cost_json": {
+        "768p_6s": "2.00",
+        "768p_10s": "4.00",
+        "1080p_6s": "3.50"
+      },
+      "notes": "MiniMax Hailuo 2.3 当前支持文生和图生视频。",
+      "source_url": "https://platform.minimaxi.com/docs/guides/pricing-paygo",
+      "last_verified_at": "2026-03-26T00:00:00"
+    },
+    {
+      "model_code": "minimax-hailuo-2.3-fast",
+      "display_name": "MiniMax Hailuo 2.3 Fast",
+      "category": "video",
+      "summary": "MiniMax Hailuo 2.3 Fast 视频模型。当前公开入口只支持图生视频。",
+      "status": "available",
+      "docs_url": "https://platform.minimaxi.com/docs/api-reference/video-generation-i2v",
+      "billing_unit": "video",
+      "currency": "CNY",
+      "multiplier": "1.11111111",
+      "official_price_json": {
+        "768p_6s": "1.35",
+        "768p_10s": "2.25",
+        "1080p_6s": "2.31"
+      },
+      "provider_cost_json": {
+        "768p_6s": "1.35",
+        "768p_10s": "2.25",
+        "1080p_6s": "2.31"
+      },
+      "notes": "MiniMax Hailuo 2.3 Fast 当前主打图生视频。",
+      "source_url": "https://platform.minimaxi.com/docs/guides/pricing-paygo",
+      "last_verified_at": "2026-03-26T00:00:00"
+    },
+    {
+      "model_code": "nano-banana",
+      "display_name": "Nano Banana",
+      "category": "image",
+      "summary": "Google Nano Banana image model for text-to-image and image-guided editing.",
+      "status": "available",
+      "docs_url": "https://ai.google.dev/gemini-api/docs/image-generation",
+      "billing_unit": "image",
+      "currency": "CNY",
+      "multiplier": "1.11111111",
+      "official_price_json": {
+        "output_per_image": "0.27300000"
+      },
+      "provider_cost_json": {
+        "google_official_output_per_image": "0.27300000",
+        "fal_output_per_image": "0.27300000",
+        "grsai_public_price_range": "0.022~0.044",
+        "grsai_quote_engine_upper_bound": "0.044",
+        "ksyun_output_per_image": "0.45"
+      },
+      "notes": "Nano Banana. Supports text-to-image and image-guided editing through Google, Fal, GRSAI and Ksyun. 金山当前按保守固定单图成本代理计价，后续再切到 usage 口径。",
+      "source_url": "https://ai.google.dev/gemini-api/docs/image-generation",
+      "last_verified_at": "2026-03-26T00:00:00"
+    },
+    {
+      "model_code": "nano-banana-2",
+      "display_name": "Nano Banana 2",
+      "category": "image",
+      "summary": "Nano Banana 2 图片模型。对外公开名为 `nano-banana-2`，Google 内部模型 ID 为 `gemini-3.1-flash-image-preview`。",
+      "status": "available",
+      "docs_url": "https://ai.google.dev/gemini-api/docs/image-generation",
+      "billing_unit": "image",
+      "currency": "CNY",
+      "multiplier": "1.11111111",
+      "official_price_json": {
+        "google_output_per_image_512": "0.31500000",
+        "google_output_per_image_1k": "0.46900000",
+        "google_output_per_image_2k": "0.70700000",
+        "google_output_per_image_4k": "1.05700000"
+      },
+      "provider_cost_json": {
+        "google_output_per_image_512": "0.31500000",
+        "google_output_per_image_1k": "0.46900000",
+        "google_output_per_image_2k": "0.70700000",
+        "google_output_per_image_4k": "1.05700000",
+        "fal_output_per_image_512": "0.42000000",
+        "fal_output_per_image_1k": "0.56000000",
+        "fal_output_per_image_2k": "0.84000000",
+        "fal_output_per_image_4k": "1.12000000",
+        "grsai_public_price_range": "0.06~0.12",
+        "grsai_quote_engine_upper_bound": "0.12",
+        "ksyun_output_per_image_1k": "0.70",
+        "ksyun_output_per_image_2k": "0.95",
+        "ksyun_output_per_image_4k": "1.30"
+      },
+      "notes": "Nano Banana 2. Supports text-to-image and image-guided editing through Google, Fal, GRSAI and Ksyun. 金山当前按保守固定单图成本代理计价，后续再切到 usage 口径。",
+      "source_url": "https://ai.google.dev/gemini-api/docs/image-generation",
+      "last_verified_at": "2026-03-26T00:00:00"
+    },
+    {
+      "model_code": "nano-banana-pro",
+      "display_name": "Nano Banana Pro",
+      "category": "image",
+      "summary": "Higher-end Nano Banana Pro image model for premium generation and editing quality.",
+      "status": "available",
+      "docs_url": "https://ai.google.dev/gemini-api/docs/image-generation",
+      "billing_unit": "image",
+      "currency": "CNY",
+      "multiplier": "1.11111111",
+      "official_price_json": {
+        "output_per_image_1k_2k": "0.93800000",
+        "output_per_image_4k": "1.68000000",
+        "input_image_per_image": "0.00770000"
+      },
+      "provider_cost_json": {
+        "google_official_output_per_image_1k_2k": "0.93800000",
+        "google_official_output_per_image_4k": "1.68000000",
+        "fal_output_per_image_1k_2k": "1.05000000",
+        "fal_output_per_image_4k": "2.10000000",
+        "grsai_public_price_range": "0.09~0.18",
+        "grsai_quote_engine_upper_bound": "0.18",
+        "ksyun_output_per_image_1k_2k": "1.20",
+        "ksyun_output_per_image_4k": "1.90"
+      },
+      "notes": "Nano Banana Pro. Supports text-to-image and image-guided editing through Google, Fal, GRSAI and Ksyun. 金山当前按保守固定单图成本代理计价，后续再切到 usage 口径。",
+      "source_url": "https://ai.google.dev/gemini-api/docs/image-generation",
+      "last_verified_at": "2026-03-26T00:00:00"
+    },
+    {
+      "model_code": "openrouter-free",
+      "display_name": "OpenRouter Free Router",
+      "category": "text",
+      "summary": "OpenRouter 官方免费模型路由器，会按请求能力随机选择当前可用的免费模型。",
+      "status": "available",
+      "docs_url": "https://openrouter.ai/openrouter/free",
+      "billing_unit": "token",
+      "currency": "CNY",
+      "multiplier": "1.11111111",
+      "official_price_json": {
+        "input_per_1m_tokens": "0",
+        "output_per_1m_tokens": "0"
+      },
+      "provider_cost_json": {
+        "input_per_1m_tokens": "0",
+        "output_per_1m_tokens": "0"
+      },
+      "notes": "OpenRouter 官方 free router 精确资源价格为 0，当前保留为引流资源，不纳入 10% 毛利定价。",
+      "source_url": "https://openrouter.ai/openrouter/free",
+      "last_verified_at": "2026-03-26T00:00:00"
+    },
+    {
+      "model_code": "qwen-voice-enrollment",
+      "display_name": "Qwen Voice Enrollment",
+      "category": "audio",
+      "summary": "Qwen 克隆音色创建接口底层模型，用于创建可复用的 cloned voice。",
+      "status": "available",
+      "docs_url": null,
+      "billing_unit": "voice",
+      "currency": "CNY",
+      "multiplier": "1.11111111",
+      "official_price_json": {
+        "per_voice": "0.01"
+      },
+      "provider_cost_json": {
+        "per_voice": "0.01"
+      },
+      "notes": "Qwen 音色克隆创建接口，官方当前按每个音色收取固定人民币价格。",
+      "source_url": "https://help.aliyun.com/zh/model-studio/model-pricing",
+      "last_verified_at": "2026-03-26T00:00:00"
+    },
+    {
+      "model_code": "qwen3-tts-flash",
+      "display_name": "Qwen TTS Flash",
+      "category": "audio",
+      "summary": "Qwen 系统音色标准模式底层模型，默认 Qwen 系统配音走这条成本链。",
+      "status": "available",
+      "docs_url": null,
+      "billing_unit": "character",
+      "currency": "CNY",
+      "multiplier": "1.11111111",
+      "official_price_json": {
+        "per_billable_character": "0.00008"
+      },
+      "provider_cost_json": {
+        "per_billable_character": "0.00008"
+      },
+      "notes": "Qwen 系统音色标准模式，阿里云官方当前按计费字符结算。",
+      "source_url": "https://help.aliyun.com/zh/model-studio/model-pricing",
+      "last_verified_at": "2026-03-26T00:00:00"
+    },
+    {
+      "model_code": "qwen3-tts-instruct-flash",
+      "display_name": "Qwen TTS Instruct Flash",
+      "category": "audio",
+      "summary": "Qwen 指令型系统音色底层模型，适合更强语气控制和播报指令约束。",
+      "status": "available",
+      "docs_url": null,
+      "billing_unit": "character",
+      "currency": "CNY",
+      "multiplier": "1.11111111",
+      "official_price_json": {
+        "per_billable_character": "0.00008"
+      },
+      "provider_cost_json": {
+        "per_billable_character": "0.00008"
+      },
+      "notes": "Qwen 指令型系统音色，当前与标准模式共用同一套人民币字符计费。",
+      "source_url": "https://help.aliyun.com/zh/model-studio/model-pricing",
+      "last_verified_at": "2026-03-26T00:00:00"
+    },
+    {
+      "model_code": "qwen3-tts-vc-2026-01-22",
+      "display_name": "Qwen Cloned Voice TTS",
+      "category": "audio",
+      "summary": "Qwen 克隆音色合成底层模型，用于已完成克隆后的配音生成。",
+      "status": "available",
+      "docs_url": null,
+      "billing_unit": "character",
+      "currency": "CNY",
+      "multiplier": "1.11111111",
+      "official_price_json": {
+        "per_billable_character": "0.00008"
+      },
+      "provider_cost_json": {
+        "per_billable_character": "0.00008"
+      },
+      "notes": "Qwen 克隆音色配音，当前按计费字符结算。",
+      "source_url": "https://help.aliyun.com/zh/model-studio/model-pricing",
+      "last_verified_at": "2026-03-26T00:00:00"
+    },
+    {
+      "model_code": "speech-2.8-hd",
+      "display_name": "MiniMax Speech 2.8 HD",
+      "category": "audio",
+      "summary": "MiniMax 系统音色和 cloned voice 异步语音任务的底层模型，默认 MiniMax 配音走这条成本链。",
+      "status": "available",
+      "docs_url": "",
+      "billing_unit": "character",
+      "currency": "CNY",
+      "multiplier": "1.11111111",
+      "official_price_json": {
+        "per_character": "0.00035"
+      },
+      "provider_cost_json": {
+        "per_character": "0.00035"
+      },
+      "notes": "MiniMax Speech 2.8 HD，官方当前按人民币字符成本结算。",
+      "source_url": "https://platform.minimaxi.com/docs/guides/pricing-paygo",
+      "last_verified_at": "2026-03-26T00:00:00"
+    },
+    {
+      "model_code": "speech-2.8-turbo",
+      "display_name": "MiniMax Speech 2.8 Turbo",
+      "category": "audio",
+      "summary": "MiniMax 当前主推的 Turbo 语音模型，适合更低成本的长文本语音合成与系统音色配音。",
+      "status": "available",
+      "docs_url": "https://platform.minimaxi.com/docs/api-reference/api-overview",
+      "billing_unit": "character",
+      "currency": "CNY",
+      "multiplier": "1.11111111",
+      "official_price_json": {
+        "per_character": "0.0002"
+      },
+      "provider_cost_json": {
+        "per_character": "0.0002"
+      },
+      "notes": "MiniMax Speech 2.8 Turbo，官方当前按人民币字符成本结算。",
+      "source_url": "https://platform.minimaxi.com/docs/guides/pricing-paygo",
+      "last_verified_at": "2026-04-10T00:00:00"
+    },
+    {
+      "model_code": "step-3.5-flash",
+      "display_name": "Step 3.5 Flash",
+      "category": "text",
+      "summary": "StepFun 的通用推理文本模型。当前上游免费变体已不可用，暂时不对外开放，待替换为有效执行模型后恢复。",
+      "status": "planned",
+      "docs_url": "https://openrouter.ai/stepfun/step-3.5-flash%3Afree",
+      "billing_unit": "token",
+      "currency": "CNY",
+      "multiplier": "1.11111111",
+      "official_price_json": {
+        "input_per_1m_tokens": "0",
+        "output_per_1m_tokens": "0"
+      },
+      "provider_cost_json": {
+        "input_per_1m_tokens": "0",
+        "output_per_1m_tokens": "0"
+      },
+      "notes": "OpenRouter 官方 :free 资源价格为 0，当前保留为引流资源，不纳入 10% 毛利定价。",
+      "source_url": "https://openrouter.ai/stepfun/step-3.5-flash%3Afree",
+      "last_verified_at": "2026-03-26T00:00:00"
+    },
+    {
+      "model_code": "veo-3",
+      "display_name": "Veo 3",
+      "category": "video",
+      "summary": "Google Veo 3 稳定版视频模型。官方支持文生和图生，当前以 720p/1080p/4K 与 16:9/9:16 为主。",
+      "status": "available",
+      "docs_url": "https://ai.google.dev/gemini-api/docs/video",
+      "billing_unit": "second",
+      "currency": "CNY",
+      "multiplier": "1.11111111",
+      "official_price_json": {
+        "per_second": "2.80000000"
+      },
+      "provider_cost_json": {
+        "per_second": "2.80000000"
+      },
+      "notes": "Veo 3 标准版稳定模型；美元供应商按固定 1:7 折算人民币。",
+      "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
+      "last_verified_at": "2026-03-26T00:00:00"
+    },
+    {
+      "model_code": "veo-3-fast",
+      "display_name": "Veo 3 Fast",
+      "category": "video",
+      "summary": "Google Veo 3 Fast 稳定版视频模型，强调更快速度和更低成本。",
+      "status": "available",
+      "docs_url": "https://ai.google.dev/gemini-api/docs/video",
+      "billing_unit": "second",
+      "currency": "CNY",
+      "multiplier": "1.11111111",
+      "official_price_json": {
+        "per_second": "1.05000000"
+      },
+      "provider_cost_json": {
+        "per_second": "1.05000000"
+      },
+      "notes": "Veo 3 Fast 稳定模型；美元供应商按固定 1:7 折算人民币。",
+      "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
+      "last_verified_at": "2026-03-26T00:00:00"
+    },
+    {
+      "model_code": "veo-3.1",
+      "display_name": "Veo 3.1",
+      "category": "video",
+      "summary": "Google Veo 3.1 预览版视频模型。平台收口为单入口，但会按输入自动识别文生、单图、首尾帧、参考图与视频延展模式。",
+      "status": "available",
+      "docs_url": "https://ai.google.dev/gemini-api/docs/video",
+      "billing_unit": "second",
+      "currency": "CNY",
+      "multiplier": "1.11111111",
+      "official_price_json": {
+        "720p_or_1080p_per_second": "2.80000000",
+        "4k_per_second": "4.20000000"
+      },
+      "provider_cost_json": {
+        "720p_or_1080p_per_second": "2.80000000",
+        "4k_per_second": "4.20000000"
+      },
+      "notes": "Veo 3.1 标准版预览模型。",
+      "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
+      "last_verified_at": "2026-03-26T00:00:00"
+    },
+    {
+      "model_code": "veo-3.1-fast",
+      "display_name": "Veo 3.1 Fast",
+      "category": "video",
+      "summary": "Google Veo 3.1 Fast 预览版视频模型，强调成本与速度平衡。",
+      "status": "available",
+      "docs_url": "https://ai.google.dev/gemini-api/docs/video",
+      "billing_unit": "second",
+      "currency": "CNY",
+      "multiplier": "1.11111111",
+      "official_price_json": {
+        "720p_or_1080p_per_second": "1.05000000",
+        "4k_per_second": "2.45000000"
+      },
+      "provider_cost_json": {
+        "720p_or_1080p_per_second": "1.05000000",
+        "4k_per_second": "2.45000000"
+      },
+      "notes": "Veo 3.1 Fast 预览模型。",
+      "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
+      "last_verified_at": "2026-03-26T00:00:00"
+    },
+    {
+      "model_code": "viduq3-pro",
+      "display_name": "Vidu Q3 Pro",
+      "category": "video",
+      "summary": "Vidu Q3 Pro 视频模型。平台按统一任务链路收口文生、图生和首尾帧三种模式。",
+      "status": "available",
+      "docs_url": "https://platform.vidu.cn/docs/text-to-video",
+      "billing_unit": "credit",
+      "currency": "CNY",
+      "multiplier": "1.11111111",
+      "official_price_json": {
+        "540p_per_second_credits": "10",
+        "720p_per_second_credits": "25",
+        "1080p_per_second_credits": "30",
+        "540p_off_peak_per_second_credits": "5",
+        "720p_off_peak_per_second_credits": "13",
+        "1080p_off_peak_per_second_credits": "15",
+        "is_rec_extra_credits": "10",
+        "credit_cost_cny": "0.03125"
+      },
+      "provider_cost_json": {
+        "per_credit": "0.03125"
+      },
+      "notes": "Vidu Q3 Pro 按官方积分规则换算为人民币和算力；错峰价仅在 audio=true 时适用，is_rec 每次额外增加 10 积分。",
+      "source_url": "https://platform.vidu.cn/docs/pricing",
+      "last_verified_at": "2026-04-10T00:00:00"
+    },
+    {
+      "model_code": "viduq3-turbo",
+      "display_name": "Vidu Q3 Turbo",
+      "category": "video",
+      "summary": "Vidu Q3 Turbo 视频模型。相比 Q3 Pro 强调更快的生成速度。",
+      "status": "available",
+      "docs_url": "https://platform.vidu.cn/docs/text-to-video",
+      "billing_unit": "credit",
+      "currency": "CNY",
+      "multiplier": "1.11111111",
+      "official_price_json": {
+        "540p_per_second_credits": "8",
+        "720p_per_second_credits": "12",
+        "1080p_per_second_credits": "14",
+        "540p_off_peak_per_second_credits": "4",
+        "720p_off_peak_per_second_credits": "6",
+        "1080p_off_peak_per_second_credits": "7",
+        "is_rec_extra_credits": "10",
+        "credit_cost_cny": "0.03125"
+      },
+      "provider_cost_json": {
+        "per_credit": "0.03125"
+      },
+      "notes": "Vidu Q3 Turbo 按官方积分规则换算为人民币和算力；错峰价仅在 audio=true 时适用，is_rec 每次额外增加 10 积分。",
+      "source_url": "https://platform.vidu.cn/docs/pricing",
+      "last_verified_at": "2026-04-10T00:00:00"
+    },
+    {
+      "model_code": "viduq1",
+      "display_name": "Vidu Q1",
+      "category": "video",
+      "summary": "Vidu video model on the planned integration list.",
+      "status": "planned",
+      "docs_url": "",
+      "billing_unit": null,
+      "currency": "CNY",
+      "multiplier": "1.11111111",
+      "official_price_json": {},
+      "provider_cost_json": {},
+      "notes": "",
+      "source_url": null,
+      "last_verified_at": null
+    },
+    {
+      "model_code": "wan2.6",
+      "display_name": "Wan 2.6",
+      "category": "video",
+      "summary": "Wan 2.6 视频资源。平台对外收口为单资源名，内部会按输入模式自动解析到文生、图生或参考生子模型。",
+      "status": "available",
+      "docs_url": "https://help.aliyun.com/zh/model-studio/use-video-generation/",
+      "billing_unit": "second",
+      "currency": "CNY",
+      "multiplier": "1.11111111",
+      "official_price_json": {
+        "720p_per_second": "0.60",
+        "1080p_per_second": "1.00"
+      },
+      "provider_cost_json": {
+        "720p_per_second": "0.60",
+        "1080p_per_second": "1.00"
+      },
+      "notes": "Wan 2.6 当前对外收口文生、图生和参考生视频，并按真实解析后的子模型计价。",
+      "source_url": "https://help.aliyun.com/zh/model-studio/model-pricing",
+      "last_verified_at": "2026-03-26T00:00:00"
+    },
+    {
+      "model_code": "wan2.6-flash",
+      "display_name": "Wan 2.6 Flash",
+      "category": "video",
+      "summary": "Wan 2.6 Flash 视频资源。当前对外收口图生和参考生两类模式，并支持静音视频档位。",
+      "status": "available",
+      "docs_url": "https://help.aliyun.com/zh/model-studio/use-video-generation/",
+      "billing_unit": "second",
+      "currency": "CNY",
+      "multiplier": "1.11111111",
+      "official_price_json": {
+        "720p_with_audio_per_second": "0.30",
+        "1080p_with_audio_per_second": "0.50",
+        "720p_silent_per_second": "0.15",
+        "1080p_silent_per_second": "0.25"
+      },
+      "provider_cost_json": {
+        "720p_with_audio_per_second": "0.30",
+        "1080p_with_audio_per_second": "0.50",
+        "720p_silent_per_second": "0.15",
+        "1080p_silent_per_second": "0.25"
+      },
+      "notes": "Wan 2.6 Flash 当前对外收口图生和参考生视频，并支持静音档位。",
+      "source_url": "https://help.aliyun.com/zh/model-studio/model-pricing",
+      "last_verified_at": "2026-03-26T00:00:00"
+    },
+    {
+      "model_code": "wan2.6-t2i",
+      "display_name": "Wan 2.6 T2I",
+      "category": "image",
+      "summary": "Qwen image generation model on the planned integration list.",
+      "status": "planned",
+      "docs_url": "",
+      "billing_unit": null,
+      "currency": "CNY",
+      "multiplier": "1.11111111",
+      "official_price_json": {},
+      "provider_cost_json": {},
+      "notes": "",
+      "source_url": null,
+      "last_verified_at": null
+    },
+    {
+      "model_code": "wan2.6-t2v",
+      "display_name": "Wan 2.6 T2V",
+      "category": "video",
+      "summary": "Qwen video generation model on the planned integration list.",
+      "status": "planned",
+      "docs_url": "",
+      "billing_unit": null,
+      "currency": "CNY",
+      "multiplier": "1.11111111",
+      "official_price_json": {},
+      "provider_cost_json": {},
+      "notes": "",
+      "source_url": null,
+      "last_verified_at": null
+    }
+  ],
+  "routes": [
+    {
+      "model_code": "DeepSeek-V3.2",
+      "route_group": "openai",
+      "endpoints_json": {
+        "create": "POST /v1/chat/completions"
+      },
+      "api_doc_json": {
+        "auth": "Authorization: Bearer <api35_api_key>",
+        "async": false,
+        "parameters": [
+          {
+            "name": "model",
+            "type": "string",
+            "required": true,
+            "description": "Fixed as DeepSeek-V3.2."
+          },
+          {
+            "name": "messages",
+            "type": "array",
+            "required": true,
+            "description": "Chat messages."
+          },
+          {
+            "name": "stream",
+            "type": "boolean",
+            "required": false,
+            "description": "Enable streaming output."
+          }
+        ]
+      },
+      "supported_input_modes_json": [
+        "chat"
+      ],
+      "is_primary": true,
+      "public_api_visible": true,
+      "default_chain_json": [
+        "35m"
+      ]
+    },
+    {
+      "model_code": "seedance-2.0",
+      "route_group": "seedance",
+      "endpoints_json": {
+        "create": "POST /v1/seedance-2.0",
+        "query": "GET /v1/tasks/{task_id}",
+        "content": "GET /v1/tasks/{task_id}/content"
+      },
+      "api_doc_json": {
+        "auth": "Authorization: Bearer <api35_api_key>",
+        "async": true,
+        "parameters": [
+          {
+            "name": "prompt",
+            "type": "string",
+            "required": true,
+            "description": "视频提示词。"
+          },
+          {
+            "name": "input_reference",
+            "type": "string",
+            "required": false,
+            "description": "单图图生输入。"
+          },
+          {
+            "name": "resolution",
+            "type": "string",
+            "required": false,
+            "description": "V1 当前固定按 `720p` 对外开放。"
+          },
+          {
+            "name": "aspect_ratio",
+            "type": "string",
+            "required": false,
+            "description": "支持 `auto`、`21:9`、`16:9`、`4:3`、`1:1`、`3:4`、`9:16`。"
+          },
+          {
+            "name": "seconds",
+            "type": "integer",
+            "required": false,
+            "description": "目标时长，当前支持 `4-15` 秒。"
+          },
+          {
+            "name": "generate_audio",
+            "type": "boolean",
+            "required": false,
+            "description": "是否生成同步音频。上游默认开启，价格不因该开关变化。"
+          },
+          {
+            "name": "seed",
+            "type": "integer",
+            "required": false,
+            "description": "可选随机种子。"
+          }
+        ]
+      },
+      "supported_input_modes_json": [
+        "text",
+        "image"
+      ],
+      "is_primary": true,
+      "public_api_visible": true,
+      "default_chain_json": [
+        "35m"
+      ]
+    },
+    {
+      "model_code": "seedance-2.0-fast",
+      "route_group": "seedance",
+      "endpoints_json": {
+        "create": "POST /v1/seedance-2.0-fast",
+        "query": "GET /v1/tasks/{task_id}",
+        "content": "GET /v1/tasks/{task_id}/content"
+      },
+      "api_doc_json": {
+        "auth": "Authorization: Bearer <api35_api_key>",
+        "async": true,
+        "parameters": [
+          {
+            "name": "prompt",
+            "type": "string",
+            "required": true,
+            "description": "视频提示词。"
+          },
+          {
+            "name": "input_reference",
+            "type": "string",
+            "required": false,
+            "description": "单图图生输入。"
+          },
+          {
+            "name": "resolution",
+            "type": "string",
+            "required": false,
+            "description": "V1 当前固定按 `720p` 对外开放。"
+          },
+          {
+            "name": "aspect_ratio",
+            "type": "string",
+            "required": false,
+            "description": "支持 `auto`、`21:9`、`16:9`、`4:3`、`1:1`、`3:4`、`9:16`。"
+          },
+          {
+            "name": "seconds",
+            "type": "integer",
+            "required": false,
+            "description": "目标时长，当前支持 `4-15` 秒。"
+          },
+          {
+            "name": "generate_audio",
+            "type": "boolean",
+            "required": false,
+            "description": "是否生成同步音频。上游默认开启，价格不因该开关变化。"
+          },
+          {
+            "name": "seed",
+            "type": "integer",
+            "required": false,
+            "description": "可选随机种子。"
+          }
+        ]
+      },
+      "supported_input_modes_json": [
+        "text",
+        "image"
+      ],
+      "is_primary": true,
+      "public_api_visible": true,
+      "default_chain_json": [
+        "35m"
+      ]
+    },
+    {
+      "model_code": "MiniMax-Hailuo-2.3",
+      "route_group": "hailuo",
+      "endpoints_json": {},
+      "api_doc_json": {},
+      "supported_input_modes_json": [
+        "text",
+        "image"
+      ],
+      "is_primary": true,
+      "public_api_visible": false,
+      "default_chain_json": []
+    },
+    {
+      "model_code": "MiniMax-M2.5",
+      "route_group": "minimax_text",
+      "endpoints_json": {},
+      "api_doc_json": {},
+      "supported_input_modes_json": [
+        "text"
+      ],
+      "is_primary": true,
+      "public_api_visible": false,
+      "default_chain_json": []
+    },
+    {
+      "model_code": "MiniMax-M2.7",
+      "route_group": "openai",
+      "endpoints_json": {
+        "create": "POST /v1/chat/completions"
+      },
+      "api_doc_json": {
+        "auth": "Authorization: Bearer <api35_api_key>",
+        "async": false,
+        "parameters": [
+          {
+            "name": "model",
+            "type": "string",
+            "required": true,
+            "description": "Fixed as MiniMax-M2.7."
+          },
+          {
+            "name": "messages",
+            "type": "array",
+            "required": true,
+            "description": "Chat messages."
+          },
+          {
+            "name": "stream",
+            "type": "boolean",
+            "required": false,
+            "description": "Enable streaming output."
+          }
+        ]
+      },
+      "supported_input_modes_json": [
+        "chat"
+      ],
+      "is_primary": true,
+      "public_api_visible": true,
+      "default_chain_json": [
+        "35m"
+      ]
+    },
+    {
+      "model_code": "MiniMax-M2.7-highspeed",
+      "route_group": "openai",
+      "endpoints_json": {
+        "create": "POST /v1/chat/completions"
+      },
+      "api_doc_json": {
+        "auth": "Authorization: Bearer <api35_api_key>",
+        "async": false,
+        "parameters": [
+          {
+            "name": "model",
+            "type": "string",
+            "required": true,
+            "description": "Fixed as MiniMax-M2.7-highspeed."
+          },
+          {
+            "name": "messages",
+            "type": "array",
+            "required": true,
+            "description": "Chat messages."
+          },
+          {
+            "name": "stream",
+            "type": "boolean",
+            "required": false,
+            "description": "Enable streaming output."
+          }
+        ]
+      },
+      "supported_input_modes_json": [
+        "chat"
+      ],
+      "is_primary": true,
+      "public_api_visible": true,
+      "default_chain_json": [
+        "35m"
+      ]
+    },
+    {
+      "model_code": "doubao-seedream-4.5",
+      "route_group": "seedream",
+      "endpoints_json": {
+        "create": "POST /v1/doubao-seedream-4.5"
+      },
+      "api_doc_json": {
+        "auth": "Authorization: Bearer <api35_api_key>",
+        "async": false,
+        "parameters": [
+          {
+            "name": "prompt",
+            "type": "string",
+            "required": true,
+            "description": "图片生成提示词。"
+          },
+          {
+            "name": "image",
+            "type": "string | array",
+            "required": false,
+            "description": "可选参考图 URL 或 Base64；传入后按图生模式处理。"
+          },
+          {
+            "name": "size",
+            "type": "string",
+            "required": false,
+            "description": "官方图片尺寸参数。当前平台默认映射 2K / 4K 到稳定像素尺寸。"
+          },
+          {
+            "name": "response_format",
+            "type": "string",
+            "required": false,
+            "description": "返回格式，常见值为 `url` 或 `b64_json`。"
+          },
+          {
+            "name": "stream",
+            "type": "boolean",
+            "required": false,
+            "description": "是否启用流式返回。"
+          },
+          {
+            "name": "watermark",
+            "type": "boolean",
+            "required": false,
+            "description": "是否添加水印。"
+          }
+        ]
+      },
+      "supported_input_modes_json": [
+        "text",
+        "image"
+      ],
+      "is_primary": true,
+      "public_api_visible": true,
+      "default_chain_json": [
+        "35m"
+      ]
+    },
+    {
+      "model_code": "doubao-seedream-5.0-lite",
+      "route_group": "seedream",
+      "endpoints_json": {
+        "create": "POST /v1/doubao-seedream-5.0-lite"
+      },
+      "api_doc_json": {
+        "auth": "Authorization: Bearer <api35_api_key>",
+        "async": false,
+        "parameters": [
+          {
+            "name": "prompt",
+            "type": "string",
+            "required": true,
+            "description": "图片生成提示词。"
+          },
+          {
+            "name": "image",
+            "type": "string | array",
+            "required": false,
+            "description": "可选参考图 URL 或 Base64；传入后按图生模式处理。"
+          },
+          {
+            "name": "size",
+            "type": "string",
+            "required": false,
+            "description": "官方图片尺寸参数。当前平台默认映射 2K / 3K 到稳定像素尺寸。"
+          },
+          {
+            "name": "response_format",
+            "type": "string",
+            "required": false,
+            "description": "返回格式，常见值为 `url` 或 `b64_json`。"
+          },
+          {
+            "name": "stream",
+            "type": "boolean",
+            "required": false,
+            "description": "是否启用流式返回。"
+          },
+          {
+            "name": "watermark",
+            "type": "boolean",
+            "required": false,
+            "description": "是否添加水印。"
+          },
+          {
+            "name": "output_format",
+            "type": "string",
+            "required": false,
+            "description": "可选输出图片格式。当前 Doubao Seedream 5.0 Lite 官方支持 `jpeg`、`png`。"
+          },
+          {
+            "name": "tools",
+            "type": "array",
+            "required": false,
+            "description": "官方工具参数数组；当前平台按上游原样透传。"
+          },
+          {
+            "name": "sequential_image_generation",
+            "type": "string",
+            "required": false,
+            "description": "可选串行生图模式；当前平台按上游原样透传。"
+          },
+          {
+            "name": "sequential_image_generation_options",
+            "type": "object",
+            "required": false,
+            "description": "串行生图配置项；当前平台按上游原样透传。"
+          },
+          {
+            "name": "optimize_prompt_options",
+            "type": "object",
+            "required": false,
+            "description": "Prompt 优化配置项；当前平台按上游原样透传。"
+          }
+        ]
+      },
+      "supported_input_modes_json": [
+        "text",
+        "image"
+      ],
+      "is_primary": true,
+      "public_api_visible": true,
+      "default_chain_json": [
+        "35m"
+      ]
+    },
+    {
+      "model_code": "gemini-2.5-flash",
+      "route_group": "openai",
+      "endpoints_json": {
+        "create": "POST /v1/chat/completions"
+      },
+      "api_doc_json": {
+        "auth": "Authorization: Bearer <api35_api_key>",
+        "async": false,
+        "parameters": [
+          {
+            "name": "model",
+            "type": "string",
+            "required": true,
+            "description": "Fixed as gemini-2.5-flash."
+          },
+          {
+            "name": "messages",
+            "type": "array",
+            "required": true,
+            "description": "Chat messages."
+          },
+          {
+            "name": "stream",
+            "type": "boolean",
+            "required": false,
+            "description": "Enable streaming output."
+          }
+        ]
+      },
+      "supported_input_modes_json": [
+        "chat"
+      ],
+      "is_primary": true,
+      "public_api_visible": true,
+      "default_chain_json": [
+        "35m"
+      ]
+    },
+    {
+      "model_code": "gemini-2.5-flash-lite",
+      "route_group": "openai",
+      "endpoints_json": {
+        "create": "POST /v1/chat/completions"
+      },
+      "api_doc_json": {
+        "auth": "Authorization: Bearer <api35_api_key>",
+        "async": false,
+        "parameters": [
+          {
+            "name": "model",
+            "type": "string",
+            "required": true,
+            "description": "Fixed as gemini-2.5-flash-lite."
+          },
+          {
+            "name": "messages",
+            "type": "array",
+            "required": true,
+            "description": "Chat messages."
+          },
+          {
+            "name": "stream",
+            "type": "boolean",
+            "required": false,
+            "description": "Enable streaming output."
+          }
+        ]
+      },
+      "supported_input_modes_json": [
+        "chat"
+      ],
+      "is_primary": true,
+      "public_api_visible": true,
+      "default_chain_json": [
+        "35m"
+      ]
+    },
+    {
+      "model_code": "gemini-2.5-pro",
+      "route_group": "gemini",
+      "endpoints_json": {
+        "create": "POST /google/v1beta/models/{model}:generateContent",
+        "create_openai": "POST /v1/chat/completions"
+      },
+      "api_doc_json": {
+        "auth": "Authorization: Bearer <api35_api_key>",
+        "async": false,
+        "parameters": [
+          {
+            "name": "model",
+            "type": "string",
+            "required": true,
+            "description": "Path model parameter, fixed as gemini-2.5-pro."
+          },
+          {
+            "name": "contents",
+            "type": "array",
+            "required": true,
+            "description": "Gemini content parts."
+          },
+          {
+            "name": "generationConfig",
+            "type": "object",
+            "required": false,
+            "description": "Generation settings."
+          }
+        ]
+      },
+      "supported_input_modes_json": [
+        "text"
+      ],
+      "is_primary": true,
+      "public_api_visible": true,
+      "default_chain_json": [
+        "35m"
+      ]
+    },
+    {
+      "model_code": "gemini-2.5-pro",
+      "route_group": "openai",
+      "endpoints_json": {
+        "create": "POST /v1/chat/completions"
+      },
+      "api_doc_json": {
+        "auth": "Authorization: Bearer <api35_api_key>",
+        "async": false,
+        "parameters": [
+          {
+            "name": "model",
+            "type": "string",
+            "required": true,
+            "description": "Fixed as gemini-2.5-pro."
+          },
+          {
+            "name": "messages",
+            "type": "array",
+            "required": true,
+            "description": "Chat messages."
+          },
+          {
+            "name": "stream",
+            "type": "boolean",
+            "required": false,
+            "description": "Enable streaming output."
+          }
+        ]
+      },
+      "supported_input_modes_json": [
+        "chat"
+      ],
+      "is_primary": false,
+      "public_api_visible": true,
+      "default_chain_json": [
+        "35m"
+      ]
+    },
+    {
+      "model_code": "gemini-3-flash-preview",
+      "route_group": "openai",
+      "endpoints_json": {
+        "create": "POST /v1/chat/completions"
+      },
+      "api_doc_json": {
+        "auth": "Authorization: Bearer <api35_api_key>",
+        "async": false,
+        "parameters": [
+          {
+            "name": "model",
+            "type": "string",
+            "required": true,
+            "description": "Fixed as gemini-3-flash-preview."
+          },
+          {
+            "name": "messages",
+            "type": "array",
+            "required": true,
+            "description": "Chat messages."
+          },
+          {
+            "name": "stream",
+            "type": "boolean",
+            "required": false,
+            "description": "Enable streaming output."
+          }
+        ]
+      },
+      "supported_input_modes_json": [
+        "chat"
+      ],
+      "is_primary": true,
+      "public_api_visible": true,
+      "default_chain_json": [
+        "35m"
+      ]
+    },
+    {
+      "model_code": "gemini-3.1-flash-lite-preview",
+      "route_group": "openai",
+      "endpoints_json": {
+        "create": "POST /v1/chat/completions"
+      },
+      "api_doc_json": {
+        "auth": "Authorization: Bearer <api35_api_key>",
+        "async": false,
+        "parameters": [
+          {
+            "name": "model",
+            "type": "string",
+            "required": true,
+            "description": "Fixed as gemini-3.1-flash-lite-preview."
+          },
+          {
+            "name": "messages",
+            "type": "array",
+            "required": true,
+            "description": "Chat messages."
+          },
+          {
+            "name": "stream",
+            "type": "boolean",
+            "required": false,
+            "description": "Enable streaming output."
+          }
+        ]
+      },
+      "supported_input_modes_json": [
+        "chat"
+      ],
+      "is_primary": true,
+      "public_api_visible": true,
+      "default_chain_json": [
+        "35m"
+      ]
+    },
+    {
+      "model_code": "gemini-3.1-pro-preview",
+      "route_group": "openai",
+      "endpoints_json": {
+        "create": "POST /v1/chat/completions"
+      },
+      "api_doc_json": {
+        "auth": "Authorization: Bearer <api35_api_key>",
+        "async": false,
+        "parameters": [
+          {
+            "name": "model",
+            "type": "string",
+            "required": true,
+            "description": "Fixed as gemini-3.1-pro-preview."
+          },
+          {
+            "name": "messages",
+            "type": "array",
+            "required": true,
+            "description": "Chat messages."
+          },
+          {
+            "name": "stream",
+            "type": "boolean",
+            "required": false,
+            "description": "Enable streaming output."
+          }
+        ]
+      },
+      "supported_input_modes_json": [
+        "chat"
+      ],
+      "is_primary": true,
+      "public_api_visible": true,
+      "default_chain_json": [
+        "35m"
+      ]
+    },
+    {
+      "model_code": "glm-4.7-flash",
+      "route_group": "openai",
+      "endpoints_json": {
+        "create": "POST /v1/chat/completions"
+      },
+      "api_doc_json": {
+        "auth": "Authorization: Bearer <api35_api_key>",
+        "async": false,
+        "parameters": [
+          {
+            "name": "model",
+            "type": "string",
+            "required": true,
+            "description": "Fixed as glm-4.7-flash."
+          },
+          {
+            "name": "messages",
+            "type": "array",
+            "required": true,
+            "description": "Chat messages."
+          },
+          {
+            "name": "stream",
+            "type": "boolean",
+            "required": false,
+            "description": "Enable streaming output."
+          }
+        ]
+      },
+      "supported_input_modes_json": [
+        "chat"
+      ],
+      "is_primary": true,
+      "public_api_visible": true,
+      "default_chain_json": [
+        "35m"
+      ]
+    },
+    {
+      "model_code": "gpt-5",
+      "route_group": "openai",
+      "endpoints_json": {
+        "create": "POST /v1/chat/completions"
+      },
+      "api_doc_json": {
+        "auth": "Authorization: Bearer <api35_api_key>",
+        "async": false,
+        "parameters": [
+          {
+            "name": "model",
+            "type": "string",
+            "required": true,
+            "description": "Fixed as gpt-5."
+          },
+          {
+            "name": "messages",
+            "type": "array",
+            "required": true,
+            "description": "Chat messages."
+          },
+          {
+            "name": "stream",
+            "type": "boolean",
+            "required": false,
+            "description": "Enable streaming output."
+          }
+        ]
+      },
+      "supported_input_modes_json": [
+        "chat"
+      ],
+      "is_primary": true,
+      "public_api_visible": true,
+      "default_chain_json": [
+        "35m"
+      ]
+    },
+    {
+      "model_code": "gpt-5.2",
+      "route_group": "openai",
+      "endpoints_json": {
+        "create": "POST /v1/chat/completions"
+      },
+      "api_doc_json": {
+        "auth": "Authorization: Bearer <api35_api_key>",
+        "async": false,
+        "parameters": [
+          {
+            "name": "model",
+            "type": "string",
+            "required": true,
+            "description": "Fixed as gpt-5.2."
+          },
+          {
+            "name": "messages",
+            "type": "array",
+            "required": true,
+            "description": "Chat messages."
+          },
+          {
+            "name": "stream",
+            "type": "boolean",
+            "required": false,
+            "description": "Enable streaming output."
+          }
+        ]
+      },
+      "supported_input_modes_json": [
+        "chat"
+      ],
+      "is_primary": true,
+      "public_api_visible": true,
+      "default_chain_json": [
+        "35m"
+      ]
+    },
+    {
+      "model_code": "gpt-5.4",
+      "route_group": "openai",
+      "endpoints_json": {
+        "create": "POST /v1/chat/completions"
+      },
+      "api_doc_json": {
+        "auth": "Authorization: Bearer <api35_api_key>",
+        "async": false,
+        "parameters": [
+          {
+            "name": "model",
+            "type": "string",
+            "required": true,
+            "description": "Fixed as gpt-5.4."
+          },
+          {
+            "name": "messages",
+            "type": "array",
+            "required": true,
+            "description": "Chat messages."
+          },
+          {
+            "name": "stream",
+            "type": "boolean",
+            "required": false,
+            "description": "Enable streaming output."
+          }
+        ]
+      },
+      "supported_input_modes_json": [
+        "chat"
+      ],
+      "is_primary": true,
+      "public_api_visible": true,
+      "default_chain_json": [
+        "35m"
+      ]
+    },
+    {
+      "model_code": "gpt-5.4-mini",
+      "route_group": "openai",
+      "endpoints_json": {
+        "create": "POST /v1/chat/completions"
+      },
+      "api_doc_json": {
+        "auth": "Authorization: Bearer <api35_api_key>",
+        "async": false,
+        "parameters": [
+          {
+            "name": "model",
+            "type": "string",
+            "required": true,
+            "description": "Fixed as gpt-5.4-mini."
+          },
+          {
+            "name": "messages",
+            "type": "array",
+            "required": true,
+            "description": "Chat messages."
+          },
+          {
+            "name": "stream",
+            "type": "boolean",
+            "required": false,
+            "description": "Enable streaming output."
+          }
+        ]
+      },
+      "supported_input_modes_json": [
+        "chat"
+      ],
+      "is_primary": true,
+      "public_api_visible": true,
+      "default_chain_json": [
+        "35m"
+      ]
+    },
+    {
+      "model_code": "gpt-5.4-nano",
+      "route_group": "openai",
+      "endpoints_json": {
+        "create": "POST /v1/chat/completions"
+      },
+      "api_doc_json": {
+        "auth": "Authorization: Bearer <api35_api_key>",
+        "async": false,
+        "parameters": [
+          {
+            "name": "model",
+            "type": "string",
+            "required": true,
+            "description": "Fixed as gpt-5.4-nano."
+          },
+          {
+            "name": "messages",
+            "type": "array",
+            "required": true,
+            "description": "Chat messages."
+          },
+          {
+            "name": "stream",
+            "type": "boolean",
+            "required": false,
+            "description": "Enable streaming output."
+          }
+        ]
+      },
+      "supported_input_modes_json": [
+        "chat"
+      ],
+      "is_primary": true,
+      "public_api_visible": true,
+      "default_chain_json": [
+        "35m"
+      ]
+    },
+    {
+      "model_code": "gpt-5.4-pro",
+      "route_group": "responses",
+      "endpoints_json": {
+        "create": "POST /v1/responses"
+      },
+      "api_doc_json": {
+        "auth": "Authorization: Bearer <api35_api_key>",
+        "async": false,
+        "parameters": [
+          {
+            "name": "model",
+            "type": "string",
+            "required": true,
+            "description": "Fixed as gpt-5.4-pro."
+          },
+          {
+            "name": "input",
+            "type": "string | array",
+            "required": true,
+            "description": "Responses API input payload."
+          },
+          {
+            "name": "instructions",
+            "type": "string",
+            "required": false,
+            "description": "Optional system or developer instructions."
+          },
+          {
+            "name": "stream",
+            "type": "boolean",
+            "required": false,
+            "description": "Enable streaming output."
+          }
+        ]
+      },
+      "supported_input_modes_json": [
+        "input"
+      ],
+      "is_primary": true,
+      "public_api_visible": true,
+      "default_chain_json": [
+        "35m"
+      ]
+    },
+    {
+      "model_code": "gpt-image-1",
+      "route_group": "openai_image",
+      "endpoints_json": {},
+      "api_doc_json": {},
+      "supported_input_modes_json": [
+        "text",
+        "edit"
+      ],
+      "is_primary": true,
+      "public_api_visible": false,
+      "default_chain_json": []
+    },
+    {
+      "model_code": "kling-o1",
+      "route_group": "kling_video",
+      "endpoints_json": {
+        "create": "POST /v1/kling-o1",
+        "query": "GET /v1/tasks/{task_id}",
+        "content": "GET /v1/tasks/{task_id}/content"
+      },
+      "api_doc_json": {
+        "auth": "Authorization: Bearer <api35_api_key>",
+        "async": true,
+        "parameters": [
+          {
+            "name": "prompt",
+            "type": "string",
+            "required": true,
+            "description": "视频提示词。官网公开契约按 Google 官方 Veo 参数锁定，其他供应商按同一契约适配。"
+          },
+          {
+            "name": "input_reference",
+            "type": "string",
+            "required": false,
+            "description": "单图图生输入。"
+          },
+          {
+            "name": "reference_images",
+            "type": "array",
+            "required": false,
+            "description": "多参考图输入。"
+          },
+          {
+            "name": "video_url",
+            "type": "string",
+            "required": false,
+            "description": "参考视频 URL；当前公开入口按 feature reference 处理。"
+          },
+          {
+            "name": "first_frame",
+            "type": "string",
+            "required": false,
+            "description": "首帧输入。"
+          },
+          {
+            "name": "last_frame",
+            "type": "string",
+            "required": false,
+            "description": "尾帧输入，需与 `first_frame` 配合。"
+          },
+          {
+            "name": "mode",
+            "type": "string",
+            "required": false,
+            "description": "生成档位，当前支持 `std`、`pro`，默认 `pro`。"
+          },
+          {
+            "name": "aspect_ratio",
+            "type": "string",
+            "required": false,
+            "description": "宽高比，常见值为 `16:9`、`9:16`、`1:1`。"
+          },
+          {
+            "name": "seconds",
+            "type": "integer",
+            "required": false,
+            "description": "目标时长，单位秒。Kling O1 当前公开支持 `5`、`10`。"
+          },
+          {
+            "name": "watermark",
+            "type": "boolean",
+            "required": false,
+            "description": "是否返回带水印结果。"
+          }
+        ]
+      },
+      "supported_input_modes_json": [
+        "text",
+        "image",
+        "reference_images",
+        "video_reference",
+        "first_last_frame"
+      ],
+      "is_primary": true,
+      "public_api_visible": true,
+      "default_chain_json": [
+        "35m"
+      ]
+    },
+    {
+      "model_code": "minimax-hailuo-02",
+      "route_group": "minimax_video",
+      "endpoints_json": {
+        "create": "POST /v1/minimax-hailuo-02",
+        "query": "GET /v1/tasks/{task_id}",
+        "content": "GET /v1/tasks/{task_id}/content"
+      },
+      "api_doc_json": {
+        "auth": "Authorization: Bearer <api35_api_key>",
+        "async": true,
+        "parameters": [
+          {
+            "name": "prompt",
+            "type": "string",
+            "required": false,
+            "description": "视频提示词；文生模式必填。"
+          },
+          {
+            "name": "input_reference",
+            "type": "string",
+            "required": false,
+            "description": "单图图生输入。"
+          },
+          {
+            "name": "first_frame",
+            "type": "string",
+            "required": false,
+            "description": "首帧输入。"
+          },
+          {
+            "name": "last_frame",
+            "type": "string",
+            "required": false,
+            "description": "尾帧输入，需与 `first_frame` 配合。"
+          },
+          {
+            "name": "resolution",
+            "type": "string",
+            "required": false,
+            "description": "官方常见取值为 `512P`、`768P`、`1080P`。"
+          },
+          {
+            "name": "aspect_ratio",
+            "type": "string",
+            "required": false,
+            "description": "官方常见取值为 `16:9`、`9:16`、`1:1`。"
+          },
+          {
+            "name": "seconds",
+            "type": "integer",
+            "required": false,
+            "description": "官方当前常见取值为 `6`、`10` 秒。"
+          },
+          {
+            "name": "prompt_optimizer",
+            "type": "boolean",
+            "required": false,
+            "description": "是否启用官方提示词优化。"
+          },
+          {
+            "name": "fast_pretreatment",
+            "type": "boolean",
+            "required": false,
+            "description": "是否启用官方快速预处理。"
+          }
+        ]
+      },
+      "supported_input_modes_json": [
+        "text",
+        "image",
+        "first_last_frame"
+      ],
+      "is_primary": true,
+      "public_api_visible": true,
+      "default_chain_json": [
+        "35m"
+      ]
+    },
+    {
+      "model_code": "minimax-hailuo-2.3",
+      "route_group": "minimax_video",
+      "endpoints_json": {
+        "create": "POST /v1/minimax-hailuo-2.3",
+        "query": "GET /v1/tasks/{task_id}",
+        "content": "GET /v1/tasks/{task_id}/content"
+      },
+      "api_doc_json": {
+        "auth": "Authorization: Bearer <api35_api_key>",
+        "async": true,
+        "parameters": [
+          {
+            "name": "prompt",
+            "type": "string",
+            "required": false,
+            "description": "视频提示词；文生模式必填。"
+          },
+          {
+            "name": "input_reference",
+            "type": "string",
+            "required": false,
+            "description": "单图图生输入。"
+          },
+          {
+            "name": "resolution",
+            "type": "string",
+            "required": false,
+            "description": "官方常见取值为 `768P`、`1080P`。"
+          },
+          {
+            "name": "aspect_ratio",
+            "type": "string",
+            "required": false,
+            "description": "官方常见取值为 `16:9`、`9:16`、`1:1`。"
+          },
+          {
+            "name": "seconds",
+            "type": "integer",
+            "required": false,
+            "description": "官方当前常见取值为 `6`、`10` 秒。"
+          },
+          {
+            "name": "prompt_optimizer",
+            "type": "boolean",
+            "required": false,
+            "description": "是否启用官方提示词优化。"
+          },
+          {
+            "name": "fast_pretreatment",
+            "type": "boolean",
+            "required": false,
+            "description": "是否启用官方快速预处理。"
+          }
+        ]
+      },
+      "supported_input_modes_json": [
+        "text",
+        "image"
+      ],
+      "is_primary": true,
+      "public_api_visible": true,
+      "default_chain_json": [
+        "35m"
+      ]
+    },
+    {
+      "model_code": "minimax-hailuo-2.3-fast",
+      "route_group": "minimax_video",
+      "endpoints_json": {
+        "create": "POST /v1/minimax-hailuo-2.3-fast",
+        "query": "GET /v1/tasks/{task_id}",
+        "content": "GET /v1/tasks/{task_id}/content"
+      },
+      "api_doc_json": {
+        "auth": "Authorization: Bearer <api35_api_key>",
+        "async": true,
+        "parameters": [
+          {
+            "name": "prompt",
+            "type": "string",
+            "required": false,
+            "description": "可选视频提示词。"
+          },
+          {
+            "name": "input_reference",
+            "type": "string",
+            "required": true,
+            "description": "图生视频输入图片。"
+          },
+          {
+            "name": "resolution",
+            "type": "string",
+            "required": false,
+            "description": "官方常见取值为 `768P`、`1080P`。"
+          },
+          {
+            "name": "aspect_ratio",
+            "type": "string",
+            "required": false,
+            "description": "官方常见取值为 `16:9`、`9:16`、`1:1`。"
+          },
+          {
+            "name": "seconds",
+            "type": "integer",
+            "required": false,
+            "description": "官方当前常见取值为 `6`、`10` 秒。"
+          },
+          {
+            "name": "prompt_optimizer",
+            "type": "boolean",
+            "required": false,
+            "description": "是否启用官方提示词优化。"
+          },
+          {
+            "name": "fast_pretreatment",
+            "type": "boolean",
+            "required": false,
+            "description": "是否启用官方快速预处理。"
+          }
+        ]
+      },
+      "supported_input_modes_json": [
+        "image"
+      ],
+      "is_primary": true,
+      "public_api_visible": true,
+      "default_chain_json": [
+        "35m"
+      ]
+    },
+    {
+      "model_code": "nano-banana",
+      "route_group": "banana",
+      "endpoints_json": {
+        "create": "POST /v1/nano-banana"
+      },
+      "api_doc_json": {
+        "auth": "Authorization: Bearer <api35_api_key>",
+        "async": false,
+        "parameters": [
+          {
+            "name": "prompt",
+            "type": "string",
+            "required": true,
+            "description": "Image generation or editing prompt. The public contract is locked to Google official Nano Banana parameters; other providers adapt to the same contract."
+          },
+          {
+            "name": "image_urls",
+            "type": "array",
+            "required": false,
+            "description": "Optional public image URLs for edit mode. Reference image count may be capped by the current provider."
+          },
+          {
+            "name": "aspect_ratio",
+            "type": "string",
+            "required": false,
+            "description": "Optional output aspect ratio. Non-Google providers may downgrade or ignore unsupported ratios."
+          },
+          {
+            "name": "resolution",
+            "type": "string",
+            "required": false,
+            "description": "Optional output resolution hint. Google official supports the full matrix; other providers may ignore unsupported values."
+          }
+        ]
+      },
+      "supported_input_modes_json": [
+        "text",
+        "edit"
+      ],
+      "is_primary": true,
+      "public_api_visible": true,
+      "default_chain_json": [
+        "35m"
+      ]
+    },
+    {
+      "model_code": "nano-banana-2",
+      "route_group": "banana",
+      "endpoints_json": {
+        "create": "POST /v1/nano-banana-2"
+      },
+      "api_doc_json": {
+        "auth": "Authorization: Bearer <api35_api_key>",
+        "async": false,
+        "parameters": [
+          {
+            "name": "prompt",
+            "type": "string",
+            "required": true,
+            "description": "Image generation or editing prompt. The public contract is locked to Google official Nano Banana parameters; other providers adapt to the same contract."
+          },
+          {
+            "name": "image_urls",
+            "type": "array",
+            "required": false,
+            "description": "Optional public image URLs for edit mode. Reference image count may be capped by the current provider."
+          },
+          {
+            "name": "aspect_ratio",
+            "type": "string",
+            "required": false,
+            "description": "可选输出比例。官网参数按 Google 官方锁定；其他供应商不支持时会按自身能力降级或忽略。"
+          },
+          {
+            "name": "resolution",
+            "type": "string",
+            "required": false,
+            "description": "分辨率会随供应商能力变化。Google 官方完整支持 `512`、`1K`、`2K`、`4K`；其他供应商不支持时会忽略。"
+          }
+        ]
+      },
+      "supported_input_modes_json": [
+        "text",
+        "edit"
+      ],
+      "is_primary": true,
+      "public_api_visible": true,
+      "default_chain_json": [
+        "35m"
+      ]
+    },
+    {
+      "model_code": "nano-banana-pro",
+      "route_group": "banana",
+      "endpoints_json": {
+        "create": "POST /v1/nano-banana-pro"
+      },
+      "api_doc_json": {
+        "auth": "Authorization: Bearer <api35_api_key>",
+        "async": false,
+        "parameters": [
+          {
+            "name": "prompt",
+            "type": "string",
+            "required": true,
+            "description": "Image generation or editing prompt. The public contract is locked to Google official Nano Banana parameters; other providers adapt to the same contract."
+          },
+          {
+            "name": "image_urls",
+            "type": "array",
+            "required": false,
+            "description": "Optional public image URLs for edit mode. Reference image count may be capped by the current provider."
+          },
+          {
+            "name": "aspect_ratio",
+            "type": "string",
+            "required": false,
+            "description": "Optional output aspect ratio. Non-Google providers may downgrade or ignore unsupported ratios."
+          },
+          {
+            "name": "resolution",
+            "type": "string",
+            "required": false,
+            "description": "1K, 2K, or 4K. Google official fully supports this matrix; other providers may ignore unsupported values."
+          }
+        ]
+      },
+      "supported_input_modes_json": [
+        "text",
+        "edit"
+      ],
+      "is_primary": true,
+      "public_api_visible": true,
+      "default_chain_json": [
+        "35m"
+      ]
+    },
+    {
+      "model_code": "openrouter-free",
+      "route_group": "openai",
+      "endpoints_json": {
+        "create": "POST /v1/chat/completions"
+      },
+      "api_doc_json": {
+        "auth": "Authorization: Bearer <api35_api_key>",
+        "async": false,
+        "parameters": [
+          {
+            "name": "model",
+            "type": "string",
+            "required": true,
+            "description": "Fixed as openrouter-free."
+          },
+          {
+            "name": "messages",
+            "type": "array",
+            "required": true,
+            "description": "Chat messages."
+          },
+          {
+            "name": "stream",
+            "type": "boolean",
+            "required": false,
+            "description": "Enable streaming output."
+          }
+        ]
+      },
+      "supported_input_modes_json": [
+        "chat"
+      ],
+      "is_primary": true,
+      "public_api_visible": true,
+      "default_chain_json": [
+        "35m"
+      ]
+    },
+    {
+      "model_code": "qwen-voice-enrollment",
+      "route_group": "qwen_voice_clone",
+      "endpoints_json": {
+        "create": "POST /v1/qwen/voice-clones"
+      },
+      "api_doc_json": {
+        "auth": "Authorization: Bearer <api35_api_key>",
+        "async": false,
+        "parameters": [
+          {
+            "name": "name",
+            "type": "string",
+            "required": true,
+            "description": "音色别名，只允许字母、数字和下划线，且不超过 16 个字符。"
+          },
+          {
+            "name": "audio_url",
+            "type": "string",
+            "required": true,
+            "description": "可直接被 Qwen 拉取的参考音频 URL。"
+          },
+          {
+            "name": "text",
+            "type": "string",
+            "required": false,
+            "description": "可选参考文本。"
+          },
+          {
+            "name": "language",
+            "type": "string",
+            "required": false,
+            "description": "可选音频语言，例如 `zh`、`en`。"
+          }
+        ]
+      },
+      "supported_input_modes_json": [
+        "voice_clone"
+      ],
+      "is_primary": true,
+      "public_api_visible": true,
+      "default_chain_json": [
+        "35m"
+      ]
+    },
+    {
+      "model_code": "qwen3-tts-flash",
+      "route_group": "qwen_tts",
+      "endpoints_json": {
+        "create": "POST /v1/qwen/system-tts"
+      },
+      "api_doc_json": {
+        "auth": "Authorization: Bearer <api35_api_key>",
+        "async": false,
+        "parameters": [
+          {
+            "name": "text",
+            "type": "string",
+            "required": true,
+            "description": "待合成文本。"
+          },
+          {
+            "name": "voice",
+            "type": "string",
+            "required": true,
+            "description": "系统音色，必须来自 `GET /v1/qwen/system-voices`。"
+          },
+          {
+            "name": "language_type",
+            "type": "string",
+            "required": false,
+            "description": "可选语言类型，例如 `Chinese`、`English`。"
+          }
+        ]
+      },
+      "supported_input_modes_json": [
+        "text_to_speech"
+      ],
+      "is_primary": true,
+      "public_api_visible": true,
+      "default_chain_json": [
+        "35m"
+      ]
+    },
+    {
+      "model_code": "qwen3-tts-instruct-flash",
+      "route_group": "qwen_tts",
+      "endpoints_json": {
+        "create": "POST /v1/qwen/system-tts"
+      },
+      "api_doc_json": {
+        "auth": "Authorization: Bearer <api35_api_key>",
+        "async": false,
+        "parameters": [
+          {
+            "name": "text",
+            "type": "string",
+            "required": true,
+            "description": "待合成文本。"
+          },
+          {
+            "name": "voice",
+            "type": "string",
+            "required": true,
+            "description": "系统音色，必须来自 `GET /v1/qwen/system-voices`。"
+          },
+          {
+            "name": "mode",
+            "type": "string",
+            "required": true,
+            "description": "必须传 `instruct` 才会命中 Instruct 模型。"
+          },
+          {
+            "name": "language_type",
+            "type": "string",
+            "required": false,
+            "description": "可选语言类型，例如 `Chinese`、`English`。"
+          },
+          {
+            "name": "instructions",
+            "type": "string",
+            "required": false,
+            "description": "可选自然语言语音控制指令。仅 Instruct 模型支持。"
+          },
+          {
+            "name": "optimize_instructions",
+            "type": "boolean",
+            "required": false,
+            "description": "是否优化 `instructions`。仅 Instruct 模型支持。"
+          }
+        ]
+      },
+      "supported_input_modes_json": [
+        "text_to_speech"
+      ],
+      "is_primary": true,
+      "public_api_visible": true,
+      "default_chain_json": [
+        "35m"
+      ]
+    },
+    {
+      "model_code": "qwen3-tts-vc-2026-01-22",
+      "route_group": "qwen_tts",
+      "endpoints_json": {
+        "create": "POST /v1/qwen/cloned-tts"
+      },
+      "api_doc_json": {
+        "auth": "Authorization: Bearer <api35_api_key>",
+        "async": false,
+        "parameters": [
+          {
+            "name": "text",
+            "type": "string",
+            "required": true,
+            "description": "待合成文本。"
+          },
+          {
+            "name": "voice",
+            "type": "string",
+            "required": true,
+            "description": "cloned voice，必须来自 `GET /v1/qwen/voice-clones`。"
+          },
+          {
+            "name": "language_type",
+            "type": "string",
+            "required": false,
+            "description": "可选语言类型，例如 `Chinese`、`English`。"
+          }
+        ]
+      },
+      "supported_input_modes_json": [
+        "cloned_voice_tts"
+      ],
+      "is_primary": true,
+      "public_api_visible": true,
+      "default_chain_json": [
+        "35m"
+      ]
+    },
+    {
+      "model_code": "speech-2.8-hd",
+      "route_group": "minimax_t2a_async",
+      "endpoints_json": {
+        "create": "POST /v1/minimax/system-tts"
+      },
+      "api_doc_json": {
+        "auth": "Authorization: Bearer <api35_api_key>",
+        "async": true,
+        "parameters": [
+          {
+            "name": "text",
+            "type": "string",
+            "required": false,
+            "description": "要合成的长文本。与 `text_file_id` 二选一。"
+          },
+          {
+            "name": "text_file_id",
+            "type": "integer",
+            "required": false,
+            "description": "已上传到 MiniMax File API 的文本文件 `file_id`。与 `text` 二选一。"
+          },
+          {
+            "name": "voice_id",
+            "type": "string",
+            "required": true,
+            "description": "要使用的 MiniMax `voice_id`。"
+          },
+          {
+            "name": "voice_setting",
+            "type": "object",
+            "required": false,
+            "description": "语音调节设置，例如 `speed`、`vol`、`pitch`。"
+          },
+          {
+            "name": "audio_setting",
+            "type": "object",
+            "required": false,
+            "description": "音频输出设置，例如 `format`、`bitrate`、`sample_rate`。"
+          },
+          {
+            "name": "language_boost",
+            "type": "string",
+            "required": false,
+            "description": "可选语言增强设置，例如 `English` 或 `auto`。"
+          },
+          {
+            "name": "pronunciation_dict",
+            "type": "object",
+            "required": false,
+            "description": "可选发音字典。"
+          },
+          {
+            "name": "subtitle_enable",
+            "type": "boolean",
+            "required": false,
+            "description": "是否开启字幕输出。"
+          }
+        ]
+      },
+      "supported_input_modes_json": [
+        "text_to_speech"
+      ],
+      "is_primary": true,
+      "public_api_visible": true,
+      "default_chain_json": [
+        "35m"
+      ]
+    },
+    {
+      "model_code": "speech-2.8-turbo",
+      "route_group": "minimax_t2a_async",
+      "endpoints_json": {
+        "create": "POST /v1/minimax/system-tts"
+      },
+      "api_doc_json": {
+        "auth": "Authorization: Bearer <api35_api_key>",
+        "async": true,
+        "parameters": [
+          {
+            "name": "model",
+            "type": "string",
+            "required": false,
+            "description": "MiniMax 语音模型，当前支持 `speech-2.8-hd` 和 `speech-2.8-turbo`。"
+          },
+          {
+            "name": "text",
+            "type": "string",
+            "required": false,
+            "description": "要合成的长文本。与 `text_file_id` 二选一。"
+          },
+          {
+            "name": "text_file_id",
+            "type": "integer",
+            "required": false,
+            "description": "已上传到 MiniMax File API 的文本文件 `file_id`。与 `text` 二选一。"
+          },
+          {
+            "name": "voice_id",
+            "type": "string",
+            "required": true,
+            "description": "要使用的 MiniMax `voice_id`。"
+          },
+          {
+            "name": "voice_setting",
+            "type": "object",
+            "required": false,
+            "description": "语音调节设置，例如 `speed`、`vol`、`pitch`。"
+          },
+          {
+            "name": "audio_setting",
+            "type": "object",
+            "required": false,
+            "description": "音频输出设置，例如 `format`、`bitrate`、`sample_rate`。"
+          },
+          {
+            "name": "language_boost",
+            "type": "string",
+            "required": false,
+            "description": "可选语言增强设置，例如 `English` 或 `auto`。"
+          },
+          {
+            "name": "pronunciation_dict",
+            "type": "object",
+            "required": false,
+            "description": "可选发音字典。"
+          },
+          {
+            "name": "subtitle_enable",
+            "type": "boolean",
+            "required": false,
+            "description": "是否开启字幕输出。"
+          }
+        ]
+      },
+      "supported_input_modes_json": [
+        "text_to_speech"
+      ],
+      "is_primary": true,
+      "public_api_visible": true,
+      "default_chain_json": [
+        "35m"
+      ]
+    },
+    {
+      "model_code": "speech-2.8-hd",
+      "route_group": "minimax_voice_clone",
+      "endpoints_json": {},
+      "api_doc_json": {},
+      "supported_input_modes_json": [
+        "voice_catalog",
+        "voice_clone"
+      ],
+      "is_primary": false,
+      "public_api_visible": false,
+      "default_chain_json": [
+        "35m"
+      ]
+    },
+    {
+      "model_code": "step-3.5-flash",
+      "route_group": "openai",
+      "endpoints_json": {
+        "create": "POST /v1/chat/completions"
+      },
+      "api_doc_json": {
+        "auth": "Authorization: Bearer <api35_api_key>",
+        "async": false,
+        "parameters": [
+          {
+            "name": "model",
+            "type": "string",
+            "required": true,
+            "description": "Fixed as step-3.5-flash."
+          },
+          {
+            "name": "messages",
+            "type": "array",
+            "required": true,
+            "description": "Chat messages."
+          },
+          {
+            "name": "stream",
+            "type": "boolean",
+            "required": false,
+            "description": "Enable streaming output."
+          }
+        ]
+      },
+      "supported_input_modes_json": [
+        "chat"
+      ],
+      "is_primary": true,
+      "public_api_visible": false,
+      "default_chain_json": []
+    },
+    {
+      "model_code": "veo-3",
+      "route_group": "veo3",
+      "endpoints_json": {
+        "create": "POST /v1/veo-3",
+        "query": "GET /v1/tasks/{task_id}",
+        "content": "GET /v1/tasks/{task_id}/content"
+      },
+      "api_doc_json": {
+        "auth": "Authorization: Bearer <api35_api_key>",
+        "async": true,
+        "parameters": [
+          {
+            "name": "prompt",
+            "type": "string",
+            "required": true,
+            "description": "视频提示词。官网公开契约按 Google 官方 Veo 参数锁定，其他供应商按同一契约适配。"
+          },
+          {
+            "name": "input_reference",
+            "type": "string",
+            "required": false,
+            "description": "单图图生输入。"
+          },
+          {
+            "name": "first_frame",
+            "type": "string",
+            "required": false,
+            "description": "首帧输入。"
+          },
+          {
+            "name": "last_frame",
+            "type": "string",
+            "required": false,
+            "description": "尾帧输入，可与 `first_frame` 配合。"
+          },
+          {
+            "name": "reference_images",
+            "type": "array",
+            "required": false,
+            "description": "参考图列表。Google 官方当前上限为 3 张。"
+          },
+          {
+            "name": "video_url",
+            "type": "string",
+            "required": false,
+            "description": "视频延展输入。当前主要由 Google 官方 Veo 3.1 系列承接，并非所有供应商或模式都支持。"
+          },
+          {
+            "name": "resolution",
+            "type": "string",
+            "required": false,
+            "description": "官方常见取值为 `720p`、`1080p`、`4k`。"
+          },
+          {
+            "name": "aspect_ratio",
+            "type": "string",
+            "required": false,
+            "description": "官方常见取值为 `16:9`、`9:16`。"
+          },
+          {
+            "name": "seconds",
+            "type": "integer",
+            "required": false,
+            "description": "官方常见取值为 `4`、`6`、`8` 秒。"
+          },
+          {
+            "name": "generate_audio",
+            "type": "boolean",
+            "required": false,
+            "description": "是否同时生成音频。Google 官方完整支持，其他供应商不支持时会忽略。"
+          },
+          {
+            "name": "number_of_videos",
+            "type": "integer",
+            "required": false,
+            "description": "可选生成数量。Google 官方支持；其他供应商不支持时会忽略。"
+          },
+          {
+            "name": "person_generation",
+            "type": "string",
+            "required": false,
+            "description": "可选人物生成策略。当前主要由 Google 官方 Veo 支持，其他供应商不支持时会忽略。"
+          },
+          {
+            "name": "negative_prompt",
+            "type": "string",
+            "required": false,
+            "description": "可选负向提示词。"
+          },
+          {
+            "name": "seed",
+            "type": "integer",
+            "required": false,
+            "description": "可选随机种子。Google 官方和部分适配供应商支持；不支持时会忽略。"
+          }
+        ]
+      },
+      "supported_input_modes_json": [
+        "text",
+        "image"
+      ],
+      "is_primary": true,
+      "public_api_visible": true,
+      "default_chain_json": [
+        "35m"
+      ]
+    },
+    {
+      "model_code": "veo-3-fast",
+      "route_group": "veo3",
+      "endpoints_json": {
+        "create": "POST /v1/veo-3-fast",
+        "query": "GET /v1/tasks/{task_id}",
+        "content": "GET /v1/tasks/{task_id}/content"
+      },
+      "api_doc_json": {
+        "auth": "Authorization: Bearer <api35_api_key>",
+        "async": true,
+        "parameters": [
+          {
+            "name": "prompt",
+            "type": "string",
+            "required": true,
+            "description": "视频提示词。"
+          },
+          {
+            "name": "input_reference",
+            "type": "string",
+            "required": false,
+            "description": "单图图生输入。"
+          },
+          {
+            "name": "first_frame",
+            "type": "string",
+            "required": false,
+            "description": "首帧输入。"
+          },
+          {
+            "name": "last_frame",
+            "type": "string",
+            "required": false,
+            "description": "尾帧输入，可与 `first_frame` 配合。"
+          },
+          {
+            "name": "reference_images",
+            "type": "array",
+            "required": false,
+            "description": "参考图列表。Google 官方当前上限为 3 张。"
+          },
+          {
+            "name": "video_url",
+            "type": "string",
+            "required": false,
+            "description": "视频延展输入。当前主要由 Google 官方 Veo 3.1 系列承接，并非所有供应商或模式都支持。"
+          },
+          {
+            "name": "resolution",
+            "type": "string",
+            "required": false,
+            "description": "官方常见取值为 `720p`、`1080p`、`4k`。"
+          },
+          {
+            "name": "aspect_ratio",
+            "type": "string",
+            "required": false,
+            "description": "官方常见取值为 `16:9`、`9:16`。"
+          },
+          {
+            "name": "seconds",
+            "type": "integer",
+            "required": false,
+            "description": "官方常见取值为 `4`、`6`、`8` 秒。"
+          },
+          {
+            "name": "generate_audio",
+            "type": "boolean",
+            "required": false,
+            "description": "是否同时生成音频。Google 官方完整支持，其他供应商不支持时会忽略。"
+          },
+          {
+            "name": "number_of_videos",
+            "type": "integer",
+            "required": false,
+            "description": "可选生成数量。Google 官方支持；其他供应商不支持时会忽略。"
+          },
+          {
+            "name": "person_generation",
+            "type": "string",
+            "required": false,
+            "description": "可选人物生成策略。当前主要由 Google 官方 Veo 支持，其他供应商不支持时会忽略。"
+          },
+          {
+            "name": "negative_prompt",
+            "type": "string",
+            "required": false,
+            "description": "可选负向提示词。"
+          },
+          {
+            "name": "seed",
+            "type": "integer",
+            "required": false,
+            "description": "可选随机种子。Google 官方和部分适配供应商支持；不支持时会忽略。"
+          }
+        ]
+      },
+      "supported_input_modes_json": [
+        "text",
+        "image"
+      ],
+      "is_primary": true,
+      "public_api_visible": true,
+      "default_chain_json": [
+        "35m"
+      ]
+    },
+    {
+      "model_code": "veo-3.1",
+      "route_group": "veo31",
+      "endpoints_json": {
+        "create": "POST /v1/veo-3.1",
+        "query": "GET /v1/tasks/{task_id}",
+        "content": "GET /v1/tasks/{task_id}/content"
+      },
+      "api_doc_json": {
+        "auth": "Authorization: Bearer <api35_api_key>",
+        "async": true,
+        "parameters": [
+          {
+            "name": "prompt",
+            "type": "string",
+            "required": true,
+            "description": "视频提示词。官网公开契约按 Google 官方 Veo 参数锁定，其他供应商按同一契约适配。"
+          },
+          {
+            "name": "input_reference",
+            "type": "string",
+            "required": false,
+            "description": "单图图生输入。"
+          },
+          {
+            "name": "first_frame",
+            "type": "string",
+            "required": false,
+            "description": "首帧输入，可与 `last_frame` 配合。"
+          },
+          {
+            "name": "last_frame",
+            "type": "string",
+            "required": false,
+            "description": "尾帧输入，可与 `first_frame` 配合。"
+          },
+          {
+            "name": "reference_images",
+            "type": "array",
+            "required": false,
+            "description": "参考图列表。Google 官方当前上限为 3 张。"
+          },
+          {
+            "name": "video_url",
+            "type": "string",
+            "required": false,
+            "description": "视频延展输入。当前主要由 Google 官方 Veo 3.1 系列承接，并非所有供应商或模式都支持。"
+          },
+          {
+            "name": "resolution",
+            "type": "string",
+            "required": false,
+            "description": "官方常见取值为 `720p`、`1080p`、`4k`。"
+          },
+          {
+            "name": "aspect_ratio",
+            "type": "string",
+            "required": false,
+            "description": "官方常见取值为 `16:9`、`9:16`。"
+          },
+          {
+            "name": "seconds",
+            "type": "integer",
+            "required": false,
+            "description": "官方常见取值为 `4`、`6`、`8` 秒。"
+          },
+          {
+            "name": "generate_audio",
+            "type": "boolean",
+            "required": false,
+            "description": "是否同时生成音频。Google 官方完整支持，其他供应商不支持时会忽略。"
+          },
+          {
+            "name": "number_of_videos",
+            "type": "integer",
+            "required": false,
+            "description": "可选生成数量。Google 官方支持；其他供应商不支持时会忽略。"
+          },
+          {
+            "name": "person_generation",
+            "type": "string",
+            "required": false,
+            "description": "可选人物生成策略。当前主要由 Google 官方 Veo 支持，其他供应商不支持时会忽略。"
+          },
+          {
+            "name": "negative_prompt",
+            "type": "string",
+            "required": false,
+            "description": "可选负向提示词。"
+          },
+          {
+            "name": "seed",
+            "type": "integer",
+            "required": false,
+            "description": "可选随机种子。Google 官方和部分适配供应商支持；不支持时会忽略。"
+          }
+        ]
+      },
+      "supported_input_modes_json": [
+        "text",
+        "image",
+        "first_last_frame",
+        "reference_images",
+        "extend_video"
+      ],
+      "is_primary": true,
+      "public_api_visible": true,
+      "default_chain_json": [
+        "35m"
+      ]
+    },
+    {
+      "model_code": "veo-3.1-fast",
+      "route_group": "veo31",
+      "endpoints_json": {
+        "create": "POST /v1/veo-3.1-fast",
+        "query": "GET /v1/tasks/{task_id}",
+        "content": "GET /v1/tasks/{task_id}/content"
+      },
+      "api_doc_json": {
+        "auth": "Authorization: Bearer <api35_api_key>",
+        "async": true,
+        "parameters": [
+          {
+            "name": "prompt",
+            "type": "string",
+            "required": true,
+            "description": "视频提示词。官网公开契约按 Google 官方 Veo 参数锁定，其他供应商按同一契约适配。"
+          },
+          {
+            "name": "input_reference",
+            "type": "string",
+            "required": false,
+            "description": "单图图生输入。"
+          },
+          {
+            "name": "first_frame",
+            "type": "string",
+            "required": false,
+            "description": "首帧输入，可与 `last_frame` 配合。"
+          },
+          {
+            "name": "last_frame",
+            "type": "string",
+            "required": false,
+            "description": "尾帧输入，可与 `first_frame` 配合。"
+          },
+          {
+            "name": "reference_images",
+            "type": "array",
+            "required": false,
+            "description": "参考图列表。Google 官方当前上限为 3 张。"
+          },
+          {
+            "name": "video_url",
+            "type": "string",
+            "required": false,
+            "description": "视频延展输入。当前主要由 Google 官方 Veo 3.1 系列承接，并非所有供应商或模式都支持。"
+          },
+          {
+            "name": "resolution",
+            "type": "string",
+            "required": false,
+            "description": "官方常见取值为 `720p`、`1080p`、`4k`。"
+          },
+          {
+            "name": "aspect_ratio",
+            "type": "string",
+            "required": false,
+            "description": "官方常见取值为 `16:9`、`9:16`。"
+          },
+          {
+            "name": "seconds",
+            "type": "integer",
+            "required": false,
+            "description": "官方常见取值为 `4`、`6`、`8` 秒。"
+          },
+          {
+            "name": "generate_audio",
+            "type": "boolean",
+            "required": false,
+            "description": "是否同时生成音频。Google 官方完整支持，其他供应商不支持时会忽略。"
+          },
+          {
+            "name": "number_of_videos",
+            "type": "integer",
+            "required": false,
+            "description": "可选生成数量。Google 官方支持；其他供应商不支持时会忽略。"
+          },
+          {
+            "name": "person_generation",
+            "type": "string",
+            "required": false,
+            "description": "可选人物生成策略。当前主要由 Google 官方 Veo 支持，其他供应商不支持时会忽略。"
+          },
+          {
+            "name": "negative_prompt",
+            "type": "string",
+            "required": false,
+            "description": "可选负向提示词。"
+          },
+          {
+            "name": "seed",
+            "type": "integer",
+            "required": false,
+            "description": "可选随机种子。Google 官方和部分适配供应商支持；不支持时会忽略。"
+          }
+        ]
+      },
+      "supported_input_modes_json": [
+        "text",
+        "image",
+        "first_last_frame",
+        "reference_images",
+        "extend_video"
+      ],
+      "is_primary": true,
+      "public_api_visible": true,
+      "default_chain_json": [
+        "35m"
+      ]
+    },
+    {
+      "model_code": "viduq3-pro",
+      "route_group": "vidu",
+      "endpoints_json": {
+        "create": "POST /v1/viduq3-pro",
+        "query": "GET /v1/tasks/{task_id}",
+        "content": "GET /v1/tasks/{task_id}/content"
+      },
+      "api_doc_json": {
+        "auth": "Authorization: Bearer <api35_api_key>",
+        "async": true,
+        "parameters": [
+          {
+            "name": "mode",
+            "type": "string",
+            "required": true,
+            "description": "Vidu 输入模式。当前支持 `text`、`image`、`start_end`。"
+          },
+          {
+            "name": "prompt",
+            "type": "string",
+            "required": false,
+            "description": "提示词。文生模式必填；图生和首尾帧模式可选。"
+          },
+          {
+            "name": "images",
+            "type": "array",
+            "required": false,
+            "description": "图像输入。图生模式传 1 张，首尾帧模式传 2 张；支持 URL 或 base64 data URL。"
+          },
+          {
+            "name": "duration",
+            "type": "integer",
+            "required": false,
+            "description": "视频时长。Q3 系列默认 5 秒，支持 1-16 秒。"
+          },
+          {
+            "name": "resolution",
+            "type": "string",
+            "required": false,
+            "description": "目标分辨率。支持 `540p`、`720p`、`1080p`。"
+          },
+          {
+            "name": "audio",
+            "type": "boolean",
+            "required": false,
+            "description": "是否启用音视频直出。Q3 系列默认开启。"
+          },
+          {
+            "name": "off_peak",
+            "type": "boolean",
+            "required": false,
+            "description": "是否启用错峰模式。Q3 系列仅在音视频直出开启时支持。"
+          },
+          {
+            "name": "is_rec",
+            "type": "boolean",
+            "required": false,
+            "description": "是否启用推荐提示词。开启后每次任务额外增加 10 积分。"
+          }
+        ]
+      },
+      "supported_input_modes_json": [
+        "text",
+        "image",
+        "start_end"
+      ],
+      "is_primary": true,
+      "public_api_visible": true,
+      "default_chain_json": [
+        "35m"
+      ]
+    },
+    {
+      "model_code": "viduq3-turbo",
+      "route_group": "vidu",
+      "endpoints_json": {
+        "create": "POST /v1/viduq3-turbo",
+        "query": "GET /v1/tasks/{task_id}",
+        "content": "GET /v1/tasks/{task_id}/content"
+      },
+      "api_doc_json": {
+        "auth": "Authorization: Bearer <api35_api_key>",
+        "async": true,
+        "parameters": [
+          {
+            "name": "mode",
+            "type": "string",
+            "required": true,
+            "description": "Vidu 输入模式。当前支持 `text`、`image`、`start_end`。"
+          },
+          {
+            "name": "prompt",
+            "type": "string",
+            "required": false,
+            "description": "提示词。文生模式必填；图生和首尾帧模式可选。"
+          },
+          {
+            "name": "images",
+            "type": "array",
+            "required": false,
+            "description": "图像输入。图生模式传 1 张，首尾帧模式传 2 张；支持 URL 或 base64 data URL。"
+          },
+          {
+            "name": "duration",
+            "type": "integer",
+            "required": false,
+            "description": "视频时长。Q3 系列默认 5 秒，支持 1-16 秒。"
+          },
+          {
+            "name": "resolution",
+            "type": "string",
+            "required": false,
+            "description": "目标分辨率。支持 `540p`、`720p`、`1080p`。"
+          },
+          {
+            "name": "audio",
+            "type": "boolean",
+            "required": false,
+            "description": "是否启用音视频直出。Q3 系列默认开启。"
+          },
+          {
+            "name": "off_peak",
+            "type": "boolean",
+            "required": false,
+            "description": "是否启用错峰模式。Q3 系列仅在音视频直出开启时支持。"
+          },
+          {
+            "name": "is_rec",
+            "type": "boolean",
+            "required": false,
+            "description": "是否启用推荐提示词。开启后每次任务额外增加 10 积分。"
+          }
+        ]
+      },
+      "supported_input_modes_json": [
+        "text",
+        "image",
+        "start_end"
+      ],
+      "is_primary": true,
+      "public_api_visible": true,
+      "default_chain_json": [
+        "35m"
+      ]
+    },
+    {
+      "model_code": "viduq1",
+      "route_group": "vidu",
+      "endpoints_json": {},
+      "api_doc_json": {},
+      "supported_input_modes_json": [
+        "text",
+        "image"
+      ],
+      "is_primary": true,
+      "public_api_visible": false,
+      "default_chain_json": []
+    },
+    {
+      "model_code": "wan2.6",
+      "route_group": "wan_video",
+      "endpoints_json": {
+        "create": "POST /v1/wan2.6",
+        "query": "GET /v1/tasks/{task_id}",
+        "content": "GET /v1/tasks/{task_id}/content"
+      },
+      "api_doc_json": {
+        "auth": "Authorization: Bearer <api35_api_key>",
+        "async": true,
+        "parameters": [
+          {
+            "name": "prompt",
+            "type": "string",
+            "required": false,
+            "description": "视频提示词；文生模式必填。"
+          },
+          {
+            "name": "input_reference",
+            "type": "string",
+            "required": false,
+            "description": "单图图生输入。"
+          },
+          {
+            "name": "reference_urls",
+            "type": "array",
+            "required": false,
+            "description": "参考生视频素材列表。"
+          },
+          {
+            "name": "audio_url",
+            "type": "string",
+            "required": false,
+            "description": "可选参考音频 URL。"
+          },
+          {
+            "name": "negative_prompt",
+            "type": "string",
+            "required": false,
+            "description": "可选负向提示词。"
+          },
+          {
+            "name": "size",
+            "type": "string",
+            "required": false,
+            "description": "目标尺寸，优先级高于 `resolution + aspect_ratio`。"
+          },
+          {
+            "name": "resolution",
+            "type": "string",
+            "required": false,
+            "description": "分辨率档位，常见值为 `720P`、`1080P`。"
+          },
+          {
+            "name": "aspect_ratio",
+            "type": "string",
+            "required": false,
+            "description": "宽高比，常见值为 `16:9`、`9:16`、`1:1`。"
+          },
+          {
+            "name": "seconds",
+            "type": "integer",
+            "required": false,
+            "description": "目标时长，单位秒。"
+          },
+          {
+            "name": "prompt_extend",
+            "type": "boolean",
+            "required": false,
+            "description": "是否启用官方提示词扩写。"
+          },
+          {
+            "name": "generate_audio",
+            "type": "boolean",
+            "required": false,
+            "description": "标准 `wan2.6` 当前不支持显式关闭音频。"
+          },
+          {
+            "name": "watermark",
+            "type": "boolean",
+            "required": false,
+            "description": "是否添加水印。"
+          },
+          {
+            "name": "shot_type",
+            "type": "string",
+            "required": false,
+            "description": "参考生镜头类型，仅 `reference` 模式支持。"
+          }
+        ]
+      },
+      "supported_input_modes_json": [
+        "text",
+        "image",
+        "reference"
+      ],
+      "is_primary": true,
+      "public_api_visible": true,
+      "default_chain_json": [
+        "35m"
+      ]
+    },
+    {
+      "model_code": "wan2.6-flash",
+      "route_group": "wan_video",
+      "endpoints_json": {
+        "create": "POST /v1/wan2.6-flash",
+        "query": "GET /v1/tasks/{task_id}",
+        "content": "GET /v1/tasks/{task_id}/content"
+      },
+      "api_doc_json": {
+        "auth": "Authorization: Bearer <api35_api_key>",
+        "async": true,
+        "parameters": [
+          {
+            "name": "prompt",
+            "type": "string",
+            "required": false,
+            "description": "可选视频提示词。"
+          },
+          {
+            "name": "input_reference",
+            "type": "string",
+            "required": false,
+            "description": "单图图生输入。"
+          },
+          {
+            "name": "reference_urls",
+            "type": "array",
+            "required": false,
+            "description": "参考生视频素材列表。"
+          },
+          {
+            "name": "audio_url",
+            "type": "string",
+            "required": false,
+            "description": "可选参考音频 URL。"
+          },
+          {
+            "name": "negative_prompt",
+            "type": "string",
+            "required": false,
+            "description": "可选负向提示词。"
+          },
+          {
+            "name": "generate_audio",
+            "type": "boolean",
+            "required": false,
+            "description": "是否生成音频；传 `false` 时按静音视频计价。"
+          },
+          {
+            "name": "size",
+            "type": "string",
+            "required": false,
+            "description": "目标尺寸，优先级高于 `resolution + aspect_ratio`。"
+          },
+          {
+            "name": "resolution",
+            "type": "string",
+            "required": false,
+            "description": "分辨率档位，常见值为 `720P`、`1080P`。"
+          },
+          {
+            "name": "aspect_ratio",
+            "type": "string",
+            "required": false,
+            "description": "宽高比，常见值为 `16:9`、`9:16`、`1:1`。"
+          },
+          {
+            "name": "seconds",
+            "type": "integer",
+            "required": false,
+            "description": "目标时长，单位秒。"
+          },
+          {
+            "name": "prompt_extend",
+            "type": "boolean",
+            "required": false,
+            "description": "是否启用官方提示词扩写。"
+          },
+          {
+            "name": "watermark",
+            "type": "boolean",
+            "required": false,
+            "description": "是否添加水印。"
+          },
+          {
+            "name": "shot_type",
+            "type": "string",
+            "required": false,
+            "description": "参考生镜头类型，仅 `reference` 模式支持。"
+          }
+        ]
+      },
+      "supported_input_modes_json": [
+        "image",
+        "reference"
+      ],
+      "is_primary": true,
+      "public_api_visible": true,
+      "default_chain_json": [
+        "35m"
+      ]
+    },
+    {
+      "model_code": "wan2.6-t2i",
+      "route_group": "wan_image",
+      "endpoints_json": {},
+      "api_doc_json": {},
+      "supported_input_modes_json": [
+        "text"
+      ],
+      "is_primary": true,
+      "public_api_visible": false,
+      "default_chain_json": []
+    },
+    {
+      "model_code": "wan2.6-t2v",
+      "route_group": "wan_video",
+      "endpoints_json": {},
+      "api_doc_json": {},
+      "supported_input_modes_json": [
+        "text"
+      ],
+      "is_primary": true,
+      "public_api_visible": false,
+      "default_chain_json": []
+    }
+  ],
+  "provider_bindings": [
+    {
+      "model_code": "DeepSeek-V3.2",
+      "route_group": "openai",
+      "provider_code": "35m",
+      "execution_model_code": "DeepSeek-V3.2",
+      "pricing_strategy": "text_tokens",
+      "is_async": false,
+      "is_streaming": true,
+      "enabled": true
+    },
+    {
+      "model_code": "seedance-2.0",
+      "route_group": "seedance",
+      "provider_code": "35m",
+      "execution_model_code": "seedance-2.0",
+      "pricing_strategy": "video_seedance",
+      "is_async": false,
+      "is_streaming": false,
+      "enabled": true
+    },
+    {
+      "model_code": "seedance-2.0-fast",
+      "route_group": "seedance",
+      "provider_code": "35m",
+      "execution_model_code": "seedance-2.0-fast",
+      "pricing_strategy": "video_seedance",
+      "is_async": false,
+      "is_streaming": false,
+      "enabled": true
+    },
+    {
+      "model_code": "MiniMax-M2.7",
+      "route_group": "openai",
+      "provider_code": "35m",
+      "execution_model_code": "MiniMax-M2.7",
+      "pricing_strategy": "text_tokens",
+      "is_async": false,
+      "is_streaming": true,
+      "enabled": true
+    },
+    {
+      "model_code": "MiniMax-M2.7-highspeed",
+      "route_group": "openai",
+      "provider_code": "35m",
+      "execution_model_code": "MiniMax-M2.7-highspeed",
+      "pricing_strategy": "text_tokens",
+      "is_async": false,
+      "is_streaming": true,
+      "enabled": true
+    },
+    {
+      "model_code": "doubao-seedream-4.5",
+      "route_group": "seedream",
+      "provider_code": "35m",
+      "execution_model_code": "doubao-seedream-4-5-251128",
+      "pricing_strategy": "image_seedream",
+      "is_async": false,
+      "is_streaming": false,
+      "enabled": true
+    },
+    {
+      "model_code": "doubao-seedream-5.0-lite",
+      "route_group": "seedream",
+      "provider_code": "35m",
+      "execution_model_code": "doubao-seedream-5-0-lite-260128",
+      "pricing_strategy": "image_seedream",
+      "is_async": false,
+      "is_streaming": false,
+      "enabled": true
+    },
+    {
+      "model_code": "gemini-2.5-flash",
+      "route_group": "openai",
+      "provider_code": "35m",
+      "execution_model_code": "gemini-2.5-flash",
+      "pricing_strategy": "text_tokens",
+      "is_async": false,
+      "is_streaming": true,
+      "enabled": true
+    },
+    {
+      "model_code": "gemini-2.5-flash-lite",
+      "route_group": "openai",
+      "provider_code": "35m",
+      "execution_model_code": "gemini-2.5-flash-lite",
+      "pricing_strategy": "text_tokens",
+      "is_async": false,
+      "is_streaming": true,
+      "enabled": true
+    },
+    {
+      "model_code": "gemini-2.5-pro",
+      "route_group": "gemini",
+      "provider_code": "35m",
+      "execution_model_code": "gemini-2.5-pro",
+      "pricing_strategy": "text_tokens",
+      "is_async": false,
+      "is_streaming": true,
+      "enabled": true
+    },
+    {
+      "model_code": "gemini-2.5-pro",
+      "route_group": "openai",
+      "provider_code": "35m",
+      "execution_model_code": "gemini-2.5-pro",
+      "pricing_strategy": "text_tokens",
+      "is_async": false,
+      "is_streaming": true,
+      "enabled": true
+    },
+    {
+      "model_code": "gemini-3-flash-preview",
+      "route_group": "openai",
+      "provider_code": "35m",
+      "execution_model_code": "gemini-3-flash-preview",
+      "pricing_strategy": "text_tokens",
+      "is_async": false,
+      "is_streaming": true,
+      "enabled": true
+    },
+    {
+      "model_code": "gemini-3.1-flash-lite-preview",
+      "route_group": "openai",
+      "provider_code": "35m",
+      "execution_model_code": "gemini-3.1-flash-lite-preview",
+      "pricing_strategy": "text_tokens",
+      "is_async": false,
+      "is_streaming": true,
+      "enabled": true
+    },
+    {
+      "model_code": "gemini-3.1-pro-preview",
+      "route_group": "openai",
+      "provider_code": "35m",
+      "execution_model_code": "gemini-3.1-pro-preview",
+      "pricing_strategy": "text_tokens",
+      "is_async": false,
+      "is_streaming": true,
+      "enabled": true
+    },
+    {
+      "model_code": "glm-4.7-flash",
+      "route_group": "openai",
+      "provider_code": "35m",
+      "execution_model_code": "@cf/zai-org/glm-4.7-flash",
+      "pricing_strategy": "text_tokens",
+      "is_async": false,
+      "is_streaming": true,
+      "enabled": true
+    },
+    {
+      "model_code": "gpt-5",
+      "route_group": "openai",
+      "provider_code": "35m",
+      "execution_model_code": "mog-1-global",
+      "pricing_strategy": "text_tokens",
+      "is_async": false,
+      "is_streaming": true,
+      "enabled": true
+    },
+    {
+      "model_code": "gpt-5.2",
+      "route_group": "openai",
+      "provider_code": "35m",
+      "execution_model_code": "mog-2-global",
+      "pricing_strategy": "text_tokens",
+      "is_async": false,
+      "is_streaming": true,
+      "enabled": true
+    },
+    {
+      "model_code": "gpt-5.4",
+      "route_group": "openai",
+      "provider_code": "35m",
+      "execution_model_code": "gpt-5.4",
+      "pricing_strategy": "text_tokens",
+      "is_async": false,
+      "is_streaming": true,
+      "enabled": true
+    },
+    {
+      "model_code": "gpt-5.4-mini",
+      "route_group": "openai",
+      "provider_code": "35m",
+      "execution_model_code": "gpt-5.4-mini",
+      "pricing_strategy": "text_tokens",
+      "is_async": false,
+      "is_streaming": true,
+      "enabled": true
+    },
+    {
+      "model_code": "gpt-5.4-nano",
+      "route_group": "openai",
+      "provider_code": "35m",
+      "execution_model_code": "gpt-5.4-nano",
+      "pricing_strategy": "text_tokens",
+      "is_async": false,
+      "is_streaming": true,
+      "enabled": true
+    },
+    {
+      "model_code": "gpt-5.4-pro",
+      "route_group": "responses",
+      "provider_code": "35m",
+      "execution_model_code": "gpt-5.4-pro",
+      "pricing_strategy": "text_tokens",
+      "is_async": false,
+      "is_streaming": true,
+      "enabled": true
+    },
+    {
+      "model_code": "kling-o1",
+      "route_group": "kling_video",
+      "provider_code": "35m",
+      "execution_model_code": "kling-video-o1",
+      "pricing_strategy": "video_kling",
+      "is_async": true,
+      "is_streaming": false,
+      "enabled": true
+    },
+    {
+      "model_code": "minimax-hailuo-02",
+      "route_group": "minimax_video",
+      "provider_code": "35m",
+      "execution_model_code": "MiniMax-Hailuo-02",
+      "pricing_strategy": "video_minimax",
+      "is_async": true,
+      "is_streaming": false,
+      "enabled": true
+    },
+    {
+      "model_code": "minimax-hailuo-2.3",
+      "route_group": "minimax_video",
+      "provider_code": "35m",
+      "execution_model_code": "MiniMax-Hailuo-2.3",
+      "pricing_strategy": "video_minimax",
+      "is_async": true,
+      "is_streaming": false,
+      "enabled": true
+    },
+    {
+      "model_code": "minimax-hailuo-2.3-fast",
+      "route_group": "minimax_video",
+      "provider_code": "35m",
+      "execution_model_code": "MiniMax-Hailuo-2.3-Fast",
+      "pricing_strategy": "video_minimax",
+      "is_async": true,
+      "is_streaming": false,
+      "enabled": true
+    },
+    {
+      "model_code": "nano-banana",
+      "route_group": "banana",
+      "provider_code": "35m",
+      "execution_model_code": "gemini-2.5-flash-image",
+      "pricing_strategy": "image_banana_fixed",
+      "is_async": false,
+      "is_streaming": false,
+      "enabled": true
+    },
+    {
+      "model_code": "nano-banana-2",
+      "route_group": "banana",
+      "provider_code": "35m",
+      "execution_model_code": "gemini-3.1-flash-image-preview",
+      "pricing_strategy": "image_banana_fixed_resolution",
+      "is_async": false,
+      "is_streaming": false,
+      "enabled": true
+    },
+    {
+      "model_code": "nano-banana-pro",
+      "route_group": "banana",
+      "provider_code": "35m",
+      "execution_model_code": "gemini-3-pro-image-preview",
+      "pricing_strategy": "image_banana_fixed_resolution",
+      "is_async": false,
+      "is_streaming": false,
+      "enabled": true
+    },
+    {
+      "model_code": "openrouter-free",
+      "route_group": "openai",
+      "provider_code": "35m",
+      "execution_model_code": "openrouter/free",
+      "pricing_strategy": "text_tokens",
+      "is_async": false,
+      "is_streaming": true,
+      "enabled": true
+    },
+    {
+      "model_code": "qwen-voice-enrollment",
+      "route_group": "qwen_voice_clone",
+      "provider_code": "35m",
+      "execution_model_code": "qwen-voice-enrollment",
+      "pricing_strategy": "audio_qwen_voice_clone",
+      "is_async": false,
+      "is_streaming": false,
+      "enabled": true
+    },
+    {
+      "model_code": "qwen3-tts-flash",
+      "route_group": "qwen_tts",
+      "provider_code": "35m",
+      "execution_model_code": "qwen3-tts-flash",
+      "pricing_strategy": "audio_qwen_tts",
+      "is_async": false,
+      "is_streaming": false,
+      "enabled": true
+    },
+    {
+      "model_code": "qwen3-tts-instruct-flash",
+      "route_group": "qwen_tts",
+      "provider_code": "35m",
+      "execution_model_code": "qwen3-tts-instruct-flash",
+      "pricing_strategy": "audio_qwen_tts",
+      "is_async": false,
+      "is_streaming": false,
+      "enabled": true
+    },
+    {
+      "model_code": "qwen3-tts-vc-2026-01-22",
+      "route_group": "qwen_tts",
+      "provider_code": "35m",
+      "execution_model_code": "qwen3-tts-vc-2026-01-22",
+      "pricing_strategy": "audio_qwen_tts",
+      "is_async": false,
+      "is_streaming": false,
+      "enabled": true
+    },
+    {
+      "model_code": "speech-2.8-hd",
+      "route_group": "minimax_t2a_async",
+      "provider_code": "35m",
+      "execution_model_code": "speech-2.8-hd",
+      "pricing_strategy": "audio_minimax_t2a",
+      "is_async": true,
+      "is_streaming": false,
+      "enabled": true
+    },
+    {
+      "model_code": "speech-2.8-turbo",
+      "route_group": "minimax_t2a_async",
+      "provider_code": "35m",
+      "execution_model_code": "speech-2.8-turbo",
+      "pricing_strategy": "audio_minimax_t2a",
+      "is_async": true,
+      "is_streaming": false,
+      "enabled": true
+    },
+    {
+      "model_code": "speech-2.8-hd",
+      "route_group": "minimax_voice_clone",
+      "provider_code": "35m",
+      "execution_model_code": "speech-2.8-hd",
+      "pricing_strategy": "audio_minimax_voice_clone",
+      "is_async": false,
+      "is_streaming": false,
+      "enabled": true
+    },
+    {
+      "model_code": "veo-3",
+      "route_group": "veo3",
+      "provider_code": "35m",
+      "execution_model_code": "veo-3",
+      "pricing_strategy": "video_veo",
+      "is_async": false,
+      "is_streaming": false,
+      "enabled": true
+    },
+    {
+      "model_code": "veo-3-fast",
+      "route_group": "veo3",
+      "provider_code": "35m",
+      "execution_model_code": "veo-3-fast",
+      "pricing_strategy": "video_veo",
+      "is_async": false,
+      "is_streaming": false,
+      "enabled": true
+    },
+    {
+      "model_code": "veo-3.1",
+      "route_group": "veo31",
+      "provider_code": "35m",
+      "execution_model_code": "veo-3.1-generate-preview",
+      "pricing_strategy": "video_veo",
+      "is_async": false,
+      "is_streaming": false,
+      "enabled": true
+    },
+    {
+      "model_code": "veo-3.1-fast",
+      "route_group": "veo31",
+      "provider_code": "35m",
+      "execution_model_code": "veo-3.1-fast-generate-preview",
+      "pricing_strategy": "video_veo",
+      "is_async": false,
+      "is_streaming": false,
+      "enabled": true
+    },
+    {
+      "model_code": "viduq3-pro",
+      "route_group": "vidu",
+      "provider_code": "35m",
+      "execution_model_code": "viduq3-pro",
+      "pricing_strategy": "video_vidu",
+      "is_async": true,
+      "is_streaming": false,
+      "enabled": true
+    },
+    {
+      "model_code": "viduq3-turbo",
+      "route_group": "vidu",
+      "provider_code": "35m",
+      "execution_model_code": "viduq3-turbo",
+      "pricing_strategy": "video_vidu",
+      "is_async": true,
+      "is_streaming": false,
+      "enabled": true
+    },
+    {
+      "model_code": "wan2.6",
+      "route_group": "wan_video",
+      "provider_code": "35m",
+      "execution_model_code": "wan2.6",
+      "pricing_strategy": "video_wan",
+      "is_async": true,
+      "is_streaming": false,
+      "enabled": true
+    },
+    {
+      "model_code": "wan2.6-flash",
+      "route_group": "wan_video",
+      "provider_code": "35m",
+      "execution_model_code": "wan2.6-flash",
+      "pricing_strategy": "video_wan",
+      "is_async": true,
+      "is_streaming": false,
+      "enabled": true
+    },
+    {
+      "model_code": "DeepSeek-V3.2",
+      "route_group": "openai",
+      "provider_code": "yunwu_openai",
+      "execution_model_code": "DeepSeek-V3.2",
+      "pricing_strategy": "text_tokens",
+      "is_async": false,
+      "is_streaming": true,
+      "enabled": true
+    },
+    {
+      "model_code": "gemini-2.5-flash",
+      "route_group": "openai",
+      "provider_code": "yunwu_openai",
+      "execution_model_code": "gemini-2.5-flash",
+      "pricing_strategy": "text_tokens",
+      "is_async": false,
+      "is_streaming": true,
+      "enabled": true
+    },
+    {
+      "model_code": "gemini-2.5-flash-lite",
+      "route_group": "openai",
+      "provider_code": "yunwu_openai",
+      "execution_model_code": "gemini-2.5-flash-lite",
+      "pricing_strategy": "text_tokens",
+      "is_async": false,
+      "is_streaming": true,
+      "enabled": true
+    },
+    {
+      "model_code": "gemini-3-flash-preview",
+      "route_group": "openai",
+      "provider_code": "yunwu_openai",
+      "execution_model_code": "gemini-3-flash-preview",
+      "pricing_strategy": "text_tokens",
+      "is_async": false,
+      "is_streaming": true,
+      "enabled": true
+    },
+    {
+      "model_code": "gemini-3.1-flash-lite-preview",
+      "route_group": "openai",
+      "provider_code": "yunwu_openai",
+      "execution_model_code": "gemini-3.1-flash-lite-preview",
+      "pricing_strategy": "text_tokens",
+      "is_async": false,
+      "is_streaming": true,
+      "enabled": true
+    },
+    {
+      "model_code": "gemini-3.1-pro-preview",
+      "route_group": "openai",
+      "provider_code": "yunwu_openai",
+      "execution_model_code": "gemini-3.1-pro-preview",
+      "pricing_strategy": "text_tokens",
+      "is_async": false,
+      "is_streaming": true,
+      "enabled": true
+    },
+    {
+      "model_code": "gpt-5.4",
+      "route_group": "openai",
+      "provider_code": "yunwu_openai",
+      "execution_model_code": "gpt-5.4",
+      "pricing_strategy": "text_tokens",
+      "is_async": false,
+      "is_streaming": true,
+      "enabled": true
+    },
+    {
+      "model_code": "gpt-5.4-mini",
+      "route_group": "openai",
+      "provider_code": "yunwu_openai",
+      "execution_model_code": "gpt-5.4-mini",
+      "pricing_strategy": "text_tokens",
+      "is_async": false,
+      "is_streaming": true,
+      "enabled": true
+    },
+    {
+      "model_code": "gpt-5.4-nano",
+      "route_group": "openai",
+      "provider_code": "yunwu_openai",
+      "execution_model_code": "gpt-5.4-nano",
+      "pricing_strategy": "text_tokens",
+      "is_async": false,
+      "is_streaming": true,
+      "enabled": true
+    }
+  ]
+}

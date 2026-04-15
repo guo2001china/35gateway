@@ -1,0 +1,149 @@
+.app-video-player {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  border-radius: inherit;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  group: true;
+
+  video {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain;
+  }
+
+  .video-controls {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+    padding: 20px 16px 16px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    
+    // Show controls when hovering over the player
+    .app-video-player:hover & {
+      opacity: 1;
+    }
+
+    // Always show if paused? Maybe.
+    &.visible {
+      opacity: 1;
+    }
+  }
+
+  .control-btn {
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    transition: color 0.2s;
+    
+    &:hover {
+      color: #1890ff;
+    }
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  .progress-slider-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    height: 20px;
+    cursor: pointer;
+    position: relative;
+
+    .progress-track {
+      width: 100%;
+      height: 4px;
+      background: rgba(255, 255, 255, 0.3);
+      border-radius: 2px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      background: #fff;
+      border-radius: 2px;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    
+    // Hidden input for better accessibility and interaction
+    input[type="range"] {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      cursor: pointer;
+      margin: 0;
+      z-index: 2;
+    }
+  }
+
+  .time-display {
+    color: #fff;
+    font-size: 13px;
+    font-family: monospace;
+    white-space: nowrap;
+    user-select: none;
+  }
+
+  .volume-control {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+    
+    &:hover .volume-slider-wrapper {
+      width: 80px;
+      opacity: 1;
+      padding-left: 8px;
+    }
+
+    .volume-slider-wrapper {
+      width: 0;
+      overflow: hidden;
+      transition: width 0.3s ease, opacity 0.3s ease;
+      opacity: 0;
+      display: flex;
+      align-items: center;
+    }
+
+    input[type="range"] {
+      width: 100%;
+      height: 4px;
+      -webkit-appearance: none;
+      background: rgba(255, 255, 255, 0.3);
+      border-radius: 2px;
+      outline: none;
+      
+      &::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        width: 12px;
+        height: 12px;
+        background: #fff;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+    }
+  }
+}

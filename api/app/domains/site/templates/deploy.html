@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <section class="page-section deploy-section">
+    <div class="section-inner page-hero page-hero-compact deploy-shell">
+      <div class="deploy-choice-grid">
+        {% for mode in page.modes %}
+          <article class="deploy-choice-card{% if mode.highlight %} highlight{% endif %}">
+            <div class="deploy-choice-top">
+              <span class="deploy-choice-index">{{ "%02d"|format(loop.index) }}</span>
+            </div>
+            <strong>{{ mode.title }}</strong>
+            <p>{{ mode.description }}</p>
+            <div class="deploy-choice-tags">
+              {% for tag in mode.tags %}
+                <span class="deploy-choice-tag">{{ tag }}</span>
+              {% endfor %}
+            </div>
+          </article>
+        {% endfor %}
+      </div>
+
+      <div class="deploy-contact-block">
+        <div class="eyebrow">{{ page.modal.eyebrow }}</div>
+        <div class="deploy-contact-grid">
+          <div class="deploy-contact-copy">
+            <h2 class="section-title section-title-slim">{{ page.modal.title }}</h2>
+            <p class="contact-modal-note">{{ page.modal.default_note }}</p>
+            {% if biz_contact.has_contact %}
+              <div class="contact-contact-row">
+                <span>{{ biz_contact.contact_label }}</span>
+                <strong id="deploy-contact-value">{{ biz_contact.contact_value }}</strong>
+              </div>
+            {% else %}
+              <div class="contact-modal-tip">{{ page.modal.contact_pending }}</div>
+            {% endif %}
+            <div class="contact-modal-tip">{{ page.modal.save_hint }}</div>
+          </div>
+          <div class="contact-qr-shell deploy-contact-qr">
+            {% if biz_contact.has_qr %}
+              <img class="contact-qr-image" src="{{ biz_contact.qr_url }}" alt="{{ page.modal.qr_alt }}" />
+            {% else %}
+              <div class="contact-qr-placeholder">{{ page.modal.placeholder }}</div>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

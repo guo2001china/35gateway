@@ -1,0 +1,69 @@
+.loading-overlay {
+  // 基础样式
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(24, 22, 34, 0.8);
+  z-index: 9999;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  // 全屏覆盖模式
+  &.full-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &.small {
+    .loading-content {
+      gap: 8px;
+      .app-icon {
+        font-size: 16px;
+      }
+      p {
+        font-size: 12px;
+      }
+    }
+  }
+
+  &.large {
+    .loading-content {
+      gap: 24px;
+      .app-icon {
+        font-size: 32px;
+      }
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+
+  .loading-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+
+    .app-icon {
+      animation: spin 1s linear infinite;
+      color: #646cff;
+    }
+
+    p {
+      margin: 0;
+      color: #e5e2f7;
+      font-size: 14px;
+    }
+  }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}

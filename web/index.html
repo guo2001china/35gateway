@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>%VITE_APP_TITLE%</title>
+    <meta name="description" content="%VITE_APP_DESCRIPTION%" />
+    <meta name="keywords" content="%VITE_APP_KEYWORDS%" />
+    <meta name="robots" content="index,follow" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta name="theme-color" content="#1d7bff" />
+    <meta name="apple-mobile-web-app-title" content="35m.ai" />
+    <meta property="og:locale" content="zh_CN" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="35m.ai" />
+    <meta property="og:title" content="%VITE_APP_TITLE%" />
+    <meta property="og:description" content="%VITE_APP_DESCRIPTION%" />
+    <meta property="og:url" content="%VITE_SITE_URL%" />
+    <meta property="og:image" content="%VITE_OG_IMAGE%" />
+    <meta property="og:image:alt" content="35m.ai" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="%VITE_APP_TITLE%" />
+    <meta name="twitter:description" content="%VITE_APP_DESCRIPTION%" />
+    <meta name="twitter:image" content="%VITE_OG_IMAGE%" />
+    <link rel="canonical" href="%VITE_SITE_URL%" />
+    <link rel="icon" href="%BASE_URL%assets/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="%BASE_URL%assets/favicon-16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="%BASE_URL%assets/favicon-32.png" />
+    <link rel="apple-touch-icon" href="%BASE_URL%assets/logo-35m-icon.png" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "35m.ai",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web",
+        "url": "%VITE_SITE_URL%",
+        "image": "%VITE_OG_IMAGE%",
+        "description": "%VITE_APP_DESCRIPTION%"
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+  </html>

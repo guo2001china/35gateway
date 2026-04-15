@@ -1,0 +1,264 @@
+{% extends "base.html" %}
+
+{% block content %}
+  {% if page.layout == "policy" %}
+    <section class="page-section">
+      <div class="section-inner policy-doc">
+        <div class="policy-doc-header">
+          <div class="eyebrow">{{ page.eyebrow }}</div>
+          <h1 class="page-title page-title-compact">
+            {% for line in page.title_lines %}
+              <span>{{ line }}</span>
+            {% endfor %}
+          </h1>
+          <p class="page-lead policy-doc-lead">{{ page.lead }}</p>
+          <div class="policy-actions">
+            {% for action in page.actions %}
+              <a class="footer-link" href="{{ action.href }}">{{ action.label }}</a>
+            {% endfor %}
+          </div>
+        </div>
+
+        <div class="policy-doc-body">
+          {% for section in page.sections %}
+            <article class="policy-section">
+              <h2>{{ section.title }}</h2>
+              <p>{{ section.description }}</p>
+              <ul class="answer-bullets policy-bullets">
+                {% for bullet in section.bullets %}
+                  <li>{{ bullet }}</li>
+                {% endfor %}
+              </ul>
+            </article>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+  {% elif active_page == "contact" %}
+    <section class="page-section">
+      <div class="section-inner contact-shell">
+        <div class="contact-surface">
+          <div class="contact-grid">
+            <div class="contact-copy">
+              <div class="eyebrow">{{ page.eyebrow }}</div>
+              <h1 class="page-title page-title-contact">
+                {% for line in page.title_lines %}
+                  <span>{{ line }}</span>
+                {% endfor %}
+              </h1>
+              <p class="page-lead contact-lead">{{ page.lead }}</p>
+              <div class="contact-focus-strip">
+                <span>API 对接</span>
+                <span>自托管</span>
+                <span>代理部署</span>
+                <span>定制集成</span>
+              </div>
+              {% if biz_contact.has_contact %}
+                <div class="contact-contact-row contact-contact-row-hero">
+                  <span>{{ biz_contact.contact_label }}</span>
+                  <strong>{{ biz_contact.contact_value }}</strong>
+                </div>
+              {% else %}
+                <div class="contact-modal-tip">联系方式待配置</div>
+              {% endif %}
+              <div class="hero-actions contact-actions">
+                {% for action in page.actions %}
+                  <a class="button{% if action.primary %} primary{% endif %}" href="{{ action.href }}">{{ action.label }}</a>
+                {% endfor %}
+              </div>
+            </div>
+            <div class="contact-visual">
+              <div class="contact-qr-shell contact-qr-shell-hero">
+                {% if biz_contact.has_qr %}
+                  <img class="contact-qr-image" src="{{ biz_contact.qr_url }}" alt="商务经理二维码" />
+                {% else %}
+                  <div class="contact-qr-placeholder">商务经理二维码待配置</div>
+                {% endif %}
+              </div>
+              <div class="contact-visual-note">手机端可长按保存二维码，再用微信识别。</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  {% elif active_page == "about" %}
+    <section class="page-section">
+      <div class="section-inner about-shell">
+        <div class="about-surface">
+          <div class="eyebrow">{{ page.eyebrow }}</div>
+          <h1 class="page-title page-title-about">
+            {% for line in page.title_lines %}
+              <span>{{ line }}</span>
+            {% endfor %}
+          </h1>
+          <p class="page-lead about-lead">{{ page.lead }}</p>
+          <div class="hero-actions about-actions">
+            {% for action in page.actions %}
+              <a class="button{% if action.primary %} primary{% endif %}" href="{{ action.href }}">{{ action.label }}</a>
+            {% endfor %}
+          </div>
+          <div class="about-grid">
+            {% for section in page.sections %}
+              <article class="about-card">
+                <h2>{{ section.title }}</h2>
+                <p>{{ section.description }}</p>
+                <ul class="answer-bullets about-bullets">
+                  {% for bullet in section.bullets %}
+                    <li>{{ bullet }}</li>
+                  {% endfor %}
+                </ul>
+              </article>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </section>
+  {% elif active_page == "support" %}
+    <section class="page-section">
+      <div class="section-inner support-shell">
+        <div class="support-surface">
+          <div class="eyebrow">{{ page.eyebrow }}</div>
+          <h1 class="page-title page-title-support">
+            {% for line in page.title_lines %}
+              <span>{{ line }}</span>
+            {% endfor %}
+          </h1>
+          <p class="page-lead support-lead">{{ page.lead }}</p>
+          <div class="hero-actions support-actions">
+            {% for action in page.actions %}
+              <a class="button{% if action.primary %} primary{% endif %}" href="{{ action.href }}">{{ action.label }}</a>
+            {% endfor %}
+          </div>
+          <div class="support-grid">
+            {% for section in page.sections %}
+              <article class="support-card">
+                <h2>{{ section.title }}</h2>
+                <p>{{ section.description }}</p>
+                <ul class="answer-bullets support-bullets">
+                  {% for bullet in section.bullets %}
+                    <li>{{ bullet }}</li>
+                  {% endfor %}
+                </ul>
+              </article>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {% if page.faq or page.related_cards %}
+      <section class="page-section">
+        <div class="section-inner answer-support-grid">
+          {% if page.faq %}
+            <article class="feature-panel answer-support-panel">
+              <div class="section-kicker">{{ page.faq_section.kicker }}</div>
+              <h2>{{ page.faq_section.title }}</h2>
+              <p>{{ page.faq_section.lead }}</p>
+              <div class="faq-list">
+                {% for item in page.faq %}
+                  <article class="faq-item">
+                    <h3>{{ item.q }}</h3>
+                    <p>{{ item.a }}</p>
+                  </article>
+                {% endfor %}
+              </div>
+            </article>
+          {% endif %}
+
+          {% if page.related_cards %}
+            <article class="feature-panel answer-support-panel">
+              <div class="section-kicker">{{ page.related_section.kicker }}</div>
+              <h2>{{ page.related_section.title }}</h2>
+              <p>{{ page.related_section.lead }}</p>
+              <div class="topic-stack">
+                {% for card in page.related_cards %}
+                  <a class="topic-card compact" href="{{ card.href }}">
+                    <h3>{{ card.title }}</h3>
+                    <p>{{ card.summary }}</p>
+                    <span class="topic-card-link">{{ card.cta }}</span>
+                  </a>
+                {% endfor %}
+              </div>
+            </article>
+          {% endif %}
+        </div>
+      </section>
+    {% endif %}
+  {% else %}
+    <section class="page-section">
+      <div class="section-inner page-hero">
+        <div class="eyebrow">{{ page.eyebrow }}</div>
+        <h1 class="page-title">
+          {% for line in page.title_lines %}
+            <span>{{ line }}</span>
+          {% endfor %}
+        </h1>
+        <p class="page-lead">{{ page.lead }}</p>
+        <div class="hero-actions">
+          {% for action in page.actions %}
+            <a class="button{% if action.primary %} primary{% endif %}" href="{{ action.href }}">{{ action.label }}</a>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+
+    {% if page.sections %}
+      <section class="page-section">
+        <div class="section-inner">
+          <div class="feature-layout answer-panel-grid">
+            {% for section in page.sections %}
+              <article class="feature-panel answer-panel">
+                <h3>{{ section.title }}</h3>
+                <p>{{ section.description }}</p>
+                <ul class="answer-bullets">
+                  {% for bullet in section.bullets %}
+                    <li>{{ bullet }}</li>
+                  {% endfor %}
+                </ul>
+              </article>
+            {% endfor %}
+          </div>
+        </div>
+      </section>
+    {% endif %}
+
+    {% if page.faq or page.related_cards %}
+      <section class="page-section">
+        <div class="section-inner answer-support-grid">
+          {% if page.faq %}
+            <article class="feature-panel answer-support-panel">
+              <div class="section-kicker">{{ page.faq_section.kicker }}</div>
+              <h2>{{ page.faq_section.title }}</h2>
+              <p>{{ page.faq_section.lead }}</p>
+              <div class="faq-list">
+                {% for item in page.faq %}
+                  <article class="faq-item">
+                    <h3>{{ item.q }}</h3>
+                    <p>{{ item.a }}</p>
+                  </article>
+                {% endfor %}
+              </div>
+            </article>
+          {% endif %}
+
+          {% if page.related_cards %}
+            <article class="feature-panel answer-support-panel">
+              <div class="section-kicker">{{ page.related_section.kicker }}</div>
+              <h2>{{ page.related_section.title }}</h2>
+              <p>{{ page.related_section.lead }}</p>
+              <div class="topic-stack">
+                {% for card in page.related_cards %}
+                  <a class="topic-card compact" href="{{ card.href }}">
+                    <h3>{{ card.title }}</h3>
+                    <p>{{ card.summary }}</p>
+                    <span class="topic-card-link">{{ card.cta }}</span>
+                  </a>
+                {% endfor %}
+              </div>
+            </article>
+          {% endif %}
+        </div>
+      </section>
+    {% endif %}
+  {% endif %}
+{% endblock %}

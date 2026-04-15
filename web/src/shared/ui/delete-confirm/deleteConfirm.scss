@@ -1,0 +1,101 @@
+.delete-modal-mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(18, 39, 66, 0.22);
+  z-index: 999;
+
+  .delete-modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: fit-content;
+    background: var(--film-bg-floating);
+    border-radius: 12px;
+    padding: 20px;
+    box-sizing: border-box;
+    width: 365px;
+    box-shadow: var(--film-shadow-floating);
+    border: 1px solid var(--film-line-soft);
+
+    .delete-modal-header {
+      height: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 600;
+      font-size: 14px;
+      color: var(--film-text-strong);
+      .close-btn {
+        width: 24px;
+        height: 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;        
+        cursor: pointer;
+        border-radius: 8px;
+        &:hover {
+          background: var(--film-bg-chip-hover);
+        }
+        .app-icon {
+          color: var(--film-text-muted);
+          font-size: 20px;
+        }
+
+      }
+    }
+
+    .delete-modal-content {
+      margin: 16px 0;
+      font-weight: 400;
+      font-size: 13px;
+      color: var(--film-text-body);
+      line-height: 21px;
+    }
+
+    .delete-modal-footer {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .delete-modal-cancel {
+      width: 88px;
+      height: 40px;
+      background: var(--film-bg-elevated);
+      border-radius: 8px;
+      font-weight: 500;
+      font-size: 13px;
+      color: var(--film-text-strong);
+      text-align: center;
+      line-height: 40px;
+
+      &:hover {
+        background: var(--film-bg-chip-hover);
+      }
+
+      cursor: pointer;
+    }
+
+    .delete-modal-confirm {
+      width: 88px;
+      height: 40px;
+      background: var(--film-error);
+      border-radius: 8px;
+      font-weight: 500;
+      font-size: 13px;
+      color: #ffffff;
+      text-align: center;
+      line-height: 40px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #d76767;
+      }
+    }
+  }
+}

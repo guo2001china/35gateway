@@ -1,0 +1,17 @@
+{
+  "name": "35gateway-monorepo",
+  "private": true,
+  "workspaces": [
+    "web"
+  ],
+  "scripts": {
+    "dev:web": "npm run dev --workspace web",
+    "build:web": "npm run build --workspace web",
+    "test:console-backend": "cd api && UV_CACHE_DIR=\"$(pwd)/.cache/uv\" uv run python -m pytest ../tests/api/platform -q",
+    "test:audit:contract": "cd api && UV_CACHE_DIR=\"$(pwd)/.cache/uv\" uv run python ../tests/audit/public_model_contract_audit.py",
+    "test:audit": "npm run test:audit:contract",
+    "test:live": "cd api && UV_CACHE_DIR=\"$(pwd)/.cache/uv\" uv run python ../tests/live/public_model_live_smoke.py",
+    "test:live:mixed": "cd api && UV_CACHE_DIR=\"$(pwd)/.cache/uv\" uv run python ../tests/live/provider_chain_mixed_smoke.py",
+    "test:live:journey": "cd api && UV_CACHE_DIR=\"$(pwd)/.cache/uv\" uv run python ../tests/live/release_user_journey_smoke.py"
+  }
+}

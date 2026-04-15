@@ -1,0 +1,48 @@
+.react-resizable {
+  position: relative;
+  display: inline-block;
+  background: transparent;
+
+  &-handle {
+    position: absolute;
+    background: transparent;
+
+    &-e {
+      right: 0;
+      top: 0;
+      width: 3px;
+      height: 100%;
+      cursor: ew-resize;      
+    }
+
+    &-s {
+      left: 0;
+      bottom: 0;
+      height: 3px;
+      width: 100%;
+      cursor: ns-resize;
+    }
+
+    &-se {
+      right: 0;
+      bottom: 0;
+      width: 10px;
+      height: 10px;
+      cursor: nwse-resize;
+    }
+  }
+
+  &:hover &-handle-e,
+  &:hover &-handle-s,
+  &:hover &-handle-se {
+    // background: rgba(104, 74, 255, 0.4);
+    background: transparent;
+  }
+
+  &.resizing &-handle-e,
+  &.resizing &-handle-s,
+  &.resizing &-handle-se {
+    // background: rgba(104, 74, 255, 0.4);
+    background: transparent;
+  }
+}

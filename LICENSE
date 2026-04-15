@@ -1,0 +1,71 @@
+35gateway Community License 1.0
+
+Copyright (c) 2026 35m.ai. All rights reserved.
+
+This repository is source-available software. It is not licensed as Open Source
+under any OSI-approved license.
+
+1. Permitted Use
+
+You may use, copy, modify, and run this software for:
+
+- personal learning
+- personal research
+- non-commercial evaluation
+- non-commercial testing
+
+You may share unmodified or modified copies of this software only if all of the
+following are true:
+
+- the distribution is free of charge
+- the use remains non-commercial
+- this license and all copyright notices stay intact
+
+2. Commercial Use Requires Authorization
+
+Any commercial use requires prior written authorization from 35m.ai.
+
+Commercial use includes, without limitation:
+
+- using the software in a business or production environment
+- using the software for client work, paid projects, or external delivery
+- offering hosted access, managed service, SaaS, API service, or shared instance
+- white-labeling, reselling, sublicensing, or embedding the software in a paid product
+- any use primarily intended to generate revenue or support commercial operations
+
+3. Restrictions
+
+Without written authorization from 35m.ai, you may not:
+
+- use the software for commercial purposes
+- host the software for third parties
+- provide paid access to the software
+- remove or obscure copyright, trademark, or license notices
+- use the names "35gateway" or "35m.ai", or any related logos or branding, except
+  as necessary to preserve upstream attribution
+
+4. Commercial Authorization
+
+Commercial authorization, paid commercial licenses, and support arrangements are
+offered separately by 35m.ai.
+
+For authorization requests, use the contact channels listed in the repository
+README.
+
+5. Ownership
+
+35m.ai retains all right, title, and interest in and to the software, except for
+the limited rights expressly granted by this license.
+
+6. No Warranty
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.
+
+7. Limitation of Liability
+
+IN NO EVENT SHALL 35m.ai OR ITS CONTRIBUTORS BE LIABLE FOR ANY CLAIM, DAMAGES,
+OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT, OR OTHERWISE,
+ARISING FROM, OUT OF, OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+DEALINGS IN THE SOFTWARE.

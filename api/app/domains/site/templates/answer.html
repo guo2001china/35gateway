@@ -1,0 +1,100 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <section class="page-section">
+    <div class="section-inner page-hero">
+      <div class="eyebrow">{{ page.eyebrow }}</div>
+      <h1 class="page-title">
+        {% for line in page.title_lines %}
+          <span>{{ line }}</span>
+        {% endfor %}
+      </h1>
+      <p class="page-lead">{{ page.lead }}</p>
+      <div class="hero-actions">
+        {% for action in page.actions %}
+          <a class="button{% if action.primary %} primary{% endif %}" href="{{ action.href }}">{{ action.label }}</a>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section">
+    <div class="section-inner">
+      <div class="answer-summary">
+        <article class="answer-direct">
+          <div class="answer-direct-media">
+            <img src="{{ '/site-static' ~ page.illustration.path }}" alt="{{ page.illustration.alt }}" loading="lazy" />
+          </div>
+          <div class="section-kicker">{{ page.answer_label }}</div>
+          <p class="answer-direct-text">{{ page.direct_answer }}</p>
+        </article>
+
+        <div class="answer-facts">
+          {% for item in page.facts %}
+            <article class="answer-fact">
+              <span>{{ item.label }}</span>
+              <strong>{{ item.text }}</strong>
+            </article>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section">
+    <div class="section-inner">
+      <div class="section-head section-head-wide">
+        <div class="section-kicker">{{ page.details_section.kicker }}</div>
+        <h2 class="section-title">{{ page.details_section.title }}</h2>
+        <p class="section-lead section-lead-wide">{{ page.details_section.lead }}</p>
+      </div>
+
+      <div class="feature-layout answer-panel-grid">
+        {% for section in page.sections %}
+          <article class="feature-panel answer-panel">
+            <h3>{{ section.title }}</h3>
+            <p>{{ section.description }}</p>
+            <ul class="answer-bullets">
+              {% for bullet in section.bullets %}
+                <li>{{ bullet }}</li>
+              {% endfor %}
+            </ul>
+          </article>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section">
+    <div class="section-inner answer-support-grid">
+      <article class="feature-panel answer-support-panel">
+        <div class="section-kicker">{{ page.faq_section.kicker }}</div>
+        <h2>{{ page.faq_section.title }}</h2>
+        <p>{{ page.faq_section.lead }}</p>
+        <div class="faq-list">
+          {% for item in page.faq %}
+            <article class="faq-item">
+              <h3>{{ item.q }}</h3>
+              <p>{{ item.a }}</p>
+            </article>
+          {% endfor %}
+        </div>
+      </article>
+
+      <article class="feature-panel answer-support-panel">
+        <div class="section-kicker">{{ page.related_section.kicker }}</div>
+        <h2>{{ page.related_section.title }}</h2>
+        <p>{{ page.related_section.lead }}</p>
+        <div class="topic-stack">
+          {% for card in page.related_cards %}
+            <a class="topic-card compact" href="{{ card.href }}">
+              <h3>{{ card.title }}</h3>
+              <p>{{ card.summary }}</p>
+              <span class="topic-card-link">{{ card.cta }}</span>
+            </a>
+          {% endfor %}
+        </div>
+      </article>
+    </div>
+  </section>
+{% endblock %}

@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <section class="page-section">
+    <div class="section-inner">
+      <div class="catalog-surface">
+        {% for section in page.catalog_section.categories %}
+          <article id="catalog-{{ section.key }}" class="catalog-panel catalog-panel-compact">
+            <div class="catalog-panel-head">
+              <span class="catalog-type">{{ section.title }}</span>
+            </div>
+            <div class="catalog-card-grid">
+              {% for item in model_groups[section.key] %}
+                <a
+                  class="catalog-model-card"
+                  href="{{ item.api_doc_href }}"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="在新标签页查看 {{ item.display_name }} 的 API 文档"
+                >
+                  <div class="catalog-model-head">
+                    <strong>{{ item.display_name }}</strong>
+                    <span class="catalog-model-price">{{ item.price_summary }}</span>
+                  </div>
+                  <div class="catalog-model-meta">
+                    <div class="catalog-model-code">{{ item.model_code }}</div>
+                    <span class="catalog-model-doc-link">API 文档</span>
+                  </div>
+                  <div class="provider-row-list">
+                    {% for badge in item.provider_badges %}
+                      <div class="provider-row{% if badge.variant == 'official' %} official{% endif %}">
+                        <span class="provider-row-name">{{ badge.label }}</span>
+                        <span class="provider-row-metric">{{ badge.success_rate }}</span>
+                        <span class="provider-row-metric">{{ badge.latency }}</span>
+                      </div>
+                    {% endfor %}
+                    {% if not item.provider_badges %}
+                      <div class="provider-row pending">
+                        <span class="provider-row-name">待验证</span>
+                        <span class="provider-row-metric">待验证</span>
+                        <span class="provider-row-metric">待验证</span>
+                      </div>
+                    {% endif %}
+                  </div>
+                </a>
+              {% endfor %}
+            </div>
+          </article>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+{% endblock %}

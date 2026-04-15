@@ -1,0 +1,154 @@
+.app-ratio-group {
+  display: flex;
+  align-items: center;
+  background: var(--film-bg-elevated);
+  border: 1px solid var(--film-line-soft);
+  border-radius: 12px;
+  padding: 4px;
+  gap: 2px;
+
+  .app-ratio-option {
+    flex: 1;
+    min-width: 80px;
+    cursor: pointer;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 0;
+    transition:
+      background-color 0.2s ease,
+      color 0.2s ease,
+      box-shadow 0.2s ease;
+
+    &.active {
+      background: var(--film-accent-soft);
+      box-shadow: inset 0 0 0 1px rgba(29, 123, 255, 0.1);
+
+      .app-ratio-option__example {
+        border-color: var(--film-accent-strong);
+      }
+
+      .app-ratio-option__text {
+        color: var(--film-accent-strong);
+      }
+    }
+
+    &:hover {
+      background: var(--film-bg-chip-hover);
+    }
+
+    &:active {
+      background: var(--film-bg-chip-active);
+    }
+
+    .app-ratio-option__example {
+      width: 16px;
+      height: 16px;
+      border: 1px solid var(--film-line-strong);
+      border-radius: 2px;
+    }
+
+    .app-ratio-option__text {
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--film-text-body);
+      line-height: 1;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+
+      .icon {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+.app-ratio-grid {
+  display: flex;
+  background: var(--film-bg-elevated);
+  border: 1px solid var(--film-line-soft);
+  border-radius: 12px;
+  padding: 4px;
+  gap: 4px;
+
+  .app-ratio-option {
+    flex: 1;
+    min-width: 80px;
+    cursor: pointer;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 0;
+    transition:
+      background-color 0.2s ease,
+      color 0.2s ease,
+      box-shadow 0.2s ease;
+
+    &.active {
+      background: var(--film-accent-soft);
+      box-shadow: inset 0 0 0 1px rgba(29, 123, 255, 0.1);
+
+      .app-ratio-option__example {
+        border-color: var(--film-accent-strong);
+      }
+
+      .app-ratio-option__text {
+        color: var(--film-accent-strong);
+      }
+    }
+
+    &:hover {
+      background: var(--film-bg-chip-hover);
+    }
+
+    &:active {
+      background: var(--film-bg-chip-active);
+    }
+
+    .app-ratio-option__example {
+      width: 16px;
+      height: 16px;
+      border: 1px solid var(--film-line-strong);
+      border-radius: 2px;
+    }
+
+    .app-ratio-option__text {
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--film-text-body);
+      line-height: 1;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+
+      .icon {
+        font-size: 16px;
+      }
+    }
+  }
+
+  .left {
+    width: 80px;
+
+    .app-ratio-option {
+      height: 100%;
+    }
+  }
+
+  .right {
+    flex: 1;
+    flex-shrink: 0;
+    display: grid;
+    gap: 4px;
+
+    .app-ratio-option {
+      min-width: 56px;
+    }
+  }
+}

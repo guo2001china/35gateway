@@ -1,0 +1,144 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <section id="hero" class="landing-hero">
+    <div class="section-inner hero-editorial">
+      <div class="eyebrow">{{ page.hero_eyebrow }}</div>
+      <h1 class="hero-title">
+        {% for line in page.hero_title_lines %}
+          <span>{{ line }}</span>
+        {% endfor %}
+        <span
+          class="hero-typewriter"
+          data-phrases='{{ page.hero_typewriter_lines | tojson }}'
+        >{{ page.hero_typewriter_lines[0] }}</span>
+      </h1>
+        <div class="hero-actions">
+          {% for action in page.hero_actions %}
+            <a
+              class="button{% if action.primary %} primary{% endif %}"
+              href="{{ action.href }}"
+              {% if action.console_entry %}data-console-entry="true"{% endif %}
+            >{{ action.label }}</a>
+          {% endfor %}
+        </div>
+
+      <div class="hero-enterprise">
+        <div class="hero-enterprise-copy">
+          <div class="hero-enterprise-title">{{ page.hero_enterprise.title }}</div>
+          <div class="hero-enterprise-note">{{ page.hero_enterprise.note }}</div>
+          <div class="hero-enterprise-tags">
+            {% for tag in page.hero_enterprise.tags %}
+              <span class="enterprise-tag">{{ tag }}</span>
+            {% endfor %}
+          </div>
+        </div>
+        <a class="button hero-enterprise-action" href="{{ page.hero_enterprise.action.href }}">{{ page.hero_enterprise.action.label }}</a>
+      </div>
+
+      <div class="hero-marquee" aria-label="支持的模型">
+        <div class="hero-marquee-track">
+          {% for item in page.hero_models %}
+            <a class="marquee-item marquee-item-link" href="{{ item.href }}" target="_blank" rel="noreferrer">
+              <span class="marquee-dot {{ item.type }}"></span>
+              <strong>{{ item.label }}</strong>
+              <span class="marquee-type">{{ item.type }}</span>
+            </a>
+          {% endfor %}
+          {% for item in page.hero_models %}
+            <a class="marquee-item marquee-item-link" href="{{ item.href }}" target="_blank" rel="noreferrer">
+              <span class="marquee-dot {{ item.type }}"></span>
+              <strong>{{ item.label }}</strong>
+              <span class="marquee-type">{{ item.type }}</span>
+            </a>
+          {% endfor %}
+        </div>
+      </div>
+
+      <div class="hero-marquee hero-marquee-cases" aria-label="行业反馈">
+        <div class="hero-marquee-track hero-marquee-track-reverse">
+          {% for item in page.hero_case_quotes %}
+            <div class="marquee-item marquee-item-case">
+              <span class="marquee-case-who">{{ item.who }}</span>
+              <strong>{{ item.quote }}</strong>
+            </div>
+          {% endfor %}
+          {% for item in page.hero_case_quotes %}
+            <div class="marquee-item marquee-item-case">
+              <span class="marquee-case-who">{{ item.who }}</span>
+              <strong>{{ item.quote }}</strong>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}
+
+{% block scripts %}
+  <script>
+    (() => {
+      const node = document.querySelector('.hero-typewriter');
+      if (!node) return;
+
+      let phrases = [];
+      try {
+        phrases = JSON.parse(node.dataset.phrases || '[]');
+      } catch {
+        phrases = [];
+      }
+
+      if (!phrases.length) return;
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        node.textContent = phrases[0];
+        return;
+      }
+
+      let phraseIndex = 0;
+      let charIndex = phrases[0].length;
+      let deleting = false;
+      let timer = null;
+
+      const schedule = (delay) => {
+        timer = window.setTimeout(tick, delay);
+      };
+
+      const tick = () => {
+        const phrase = phrases[phraseIndex];
+
+        if (!deleting) {
+          charIndex += 1;
+          if (charIndex >= phrase.length) {
+            charIndex = phrase.length;
+            node.textContent = phrase;
+            deleting = true;
+            schedule(2200);
+            return;
+          }
+        } else {
+          charIndex -= 1;
+          if (charIndex <= 0) {
+            charIndex = 0;
+            deleting = false;
+            phraseIndex = (phraseIndex + 1) % phrases.length;
+            schedule(420);
+            node.textContent = '';
+            return;
+          }
+        }
+
+        node.textContent = phrase.slice(0, charIndex);
+        schedule(deleting ? 56 : 128);
+      };
+
+      node.textContent = phrases[0];
+      schedule(2200);
+
+      window.addEventListener('pagehide', () => {
+        if (timer !== null) {
+          window.clearTimeout(timer);
+        }
+      }, { once: true });
+    })();
+  </script>
+{% endblock %}

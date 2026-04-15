@@ -1,0 +1,15 @@
+
+.main-layout {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden; /* 保留，避免页面级滚动条，使用右侧内容区独立滚动 */
+  background: var(--film-bg-main);
+
+  .main-content {
+    flex: 1;
+    height: 100vh;           /* 让内容区撑满视口高度 */
+    overflow-y: auto;        /* 右侧出现垂直滚动条 */
+    overflow-x: hidden;      /* 禁止横向滚动 */
+  }
+}

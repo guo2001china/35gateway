@@ -1,0 +1,41 @@
+.edit-profile {
+  padding: 16px 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  .field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .label {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--film-text-strong);
+  }
+
+  .actions {
+    padding-top: 8px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .confirm-btn {
+    width: 100%;
+    height: 44px;
+    border-radius: 8px;
+    border: none;
+    background: var(--film-accent);
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  .profile-edit-icons {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--film-text-muted);
+  }
+}

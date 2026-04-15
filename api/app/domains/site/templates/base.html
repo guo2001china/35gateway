@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="{{ html_lang }}">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{ page_title }}</title>
+    <meta name="description" content="{{ page_description }}" />
+    <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+    <meta name="theme-color" content="#f8fafc" />
+    <link rel="canonical" href="{{ canonical_url }}" />
+    <meta property="og:site_name" content="{{ brand_site_name }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="{{ og_locale }}" />
+    <meta property="og:title" content="{{ og_title }}" />
+    <meta property="og:description" content="{{ og_description }}" />
+    <meta property="og:url" content="{{ canonical_url }}" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="{{ og_title }}" />
+    <meta name="twitter:description" content="{{ og_description }}" />
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ brand_favicon_url }}" />
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ brand_favicon_url }}" />
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ brand_apple_touch_icon_url }}" />
+    <link rel="stylesheet" href="/site-static/site.css" />
+    {% for block in structured_data_blocks %}
+      <script type="application/ld+json">{{ block | safe }}</script>
+    {% endfor %}
+  </head>
+  <body>
+    <div class="page">
+      <header class="nav">
+        <div class="nav-inner">
+          <a class="brand" href="{{ nav_links[0].href }}">
+            <img class="brand-logo" src="{{ brand_logo_url }}" alt="{{ brand_site_name }} logo" />
+            <span class="brand-tagline">{{ brand_display_text }}</span>
+          </a>
+
+          <div class="nav-actions">
+            <nav class="nav-links">
+              {% for item in nav_links %}
+                <a
+                  class="nav-link{% if item.active %} active{% endif %}{% if item.primary %} primary{% endif %}"
+                  href="{{ item.href }}"
+                  {% if item.console_entry %}data-console-entry="true"{% endif %}
+                >{{ item.label }}</a>
+              {% endfor %}
+            </nav>
+          </div>
+        </div>
+      </header>
+
+      {% block content %}{% endblock %}
+
+      <footer class="footer">
+        <div class="section-inner footer-inner">
+          <div class="footer-copy">
+            <a class="footer-brand" href="{{ nav_links[0].href }}">
+              <img class="footer-brand-logo" src="{{ brand_logo_url }}" alt="{{ brand_site_name }} logo" />
+              <span class="footer-brand-tagline">{{ brand_display_text }}</span>
+            </a>
+            <span>{{ footer_description }}</span>
+            {% if footer_community %}
+              <div class="footer-community">
+                {% for item in footer_community %}
+                  <div class="footer-community-item">
+                    <strong>{{ item.label }}</strong>
+                    <span>{{ item.kind }}</span>
+                  </div>
+                {% endfor %}
+              </div>
+            {% endif %}
+            <small>{{ footer_note }}</small>
+          </div>
+          <div class="footer-groups">
+            {% for group in footer_groups %}
+              <div class="footer-group">
+                <div class="footer-group-title">{{ group.title }}</div>
+                <div class="footer-links">
+                  {% for item in group.links %}
+                    <a class="footer-link" href="{{ item.href }}">{{ item.label }}</a>
+                  {% endfor %}
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    {% block scripts %}{% endblock %}
+    <script>
+      (() => {
+        const SESSION_STORAGE_KEY = "session_token";
+        const consoleHomeUrl = {{ console_home_url | tojson }};
+        const consoleLoginUrl = {{ console_login_url | tojson }};
+
+        let token = null;
+        try {
+          token = window.localStorage.getItem(SESSION_STORAGE_KEY);
+        } catch {
+          token = null;
+        }
+
+        const isLoggedIn = typeof token === "string" && token.trim().length > 0;
+        const href = isLoggedIn ? consoleHomeUrl : consoleLoginUrl;
+
+        document.querySelectorAll("[data-console-entry]").forEach((node) => {
+          if (!(node instanceof HTMLAnchorElement)) {
+            return;
+          }
+          node.href = href;
+        });
+      })();
+    </script>
+  </body>
+</html>
